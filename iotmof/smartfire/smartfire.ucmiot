@@ -1,0 +1,725 @@
+/**** Declarations ****/
+
+!List Modes: 
+	NORMAL::Normal::default, 
+	RESTRICTED::NoAlert, 
+	RESTRICTED::NoInternet
+
+!List Exceptions: 
+	{NETWORK_EXCEPTION::NoInternet},
+	{NETWORK_EXCEPTION::UserUnavailable},
+	{NETWORK_EXCEPTION::SprinklerSystemUnreachable}, 
+	{NETWORK_EXCEPTION::CenteralMonitoringStationUnreachable}, 
+	{HARDWARE_EXCEPTION::SmokeSensorFailure},
+	{HARDWARE_EXCEPTION::HeatSensorFailure},
+	{HARDWARE_EXCEPTION::CarbonMonoxideSensorFailure},
+	{HARDWARE_EXCEPTION::AlarmFailure},
+	{HARDWARE_EXCEPTION::ButtonFailure},
+	{HARDWARE_EXCEPTION::DoorNotWorking},
+	{HARDWARE_EXCEPTION::DisplayColorChange},
+	{HARDWARE_EXCEPTION::DisplayColorRevert},
+	{HARDWARE_EXCEPTION::BatteryLevelNotFound},
+	{ENVIRONMENT_EXCEPTION::PowerOutage::global},
+	{ENVIRONMENT_EXCEPTION::CyberAttack::global},
+	{ENVIRONMENT_EXCEPTION::DoorBlocked},
+	{SOFTWARE_EXCEPTION::CenteralMonitoringStationUnavailable},
+	{SOFTWARE_EXCEPTION::SprinklerSystemUnavailable}
+
+/**** Use Cases ****/
+
+use case: UseSmartFireAlarmSystem
+scope: SmartFireAlarm
+level: SUMMARY
+primary actor:     HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "The Smart Fire Alarm System needs to sound an alarm, alert the stakeholders,
+            and execute an initial response to minimize damage and save lives."
+main success scenario:
+	"Steps 1-4 can be done any order."
+	1. "User informs System through the MobileDevice they want to update the settings or change components."
+	2. [SystemMaintenance] "User performs maintenance on the System"                                                        
+	"Components are tested once a day."
+	3. [TestComponents] "System runs diagnostic on all the components"                                                                                          
+	4. [TurnOffAlarm]  "User turns off the alarm by pressing a button"
+    use case ends in: SUCCESS
+extensions:
+	exception for (1-4):
+		(1-4)a. {NETWORK_EXCEPTION::NoInternet} "System cannot connect with the Internet"      
+		use case ends in: FAILURE
+	exception for (1-4):
+		(1-4)b. {ENVIRONMENT_EXCEPTION::PowerOutage} "Power failure causes the WIFI to go down"
+		use case ends in: FAILURE
+	exception for (1-4):
+		(1-4)c. {ENVIRONMENT_EXCEPTION::CyberAttack} "System is under attack by CyberCriminals"
+		use case ends in: FAILURE
+	alternative for (1-4):    
+		(1-4)d. [SoundHeatAlarm] "Any time during step 1-4 the System can invoke SoundHeatAlarm"  
+		use case ends in: SUCCESS
+	alternative for (1-4):  
+		(1-4)e. [SoundSmokeAlarm] "Any time during step 1-4 the System can invoke SoundSmokeAlarm"
+		use case ends in: SUCCESS
+	alternative for (1-4):  
+		(1-4)f. [SoundCarbonMonoxideAlarm]  "Any time during step 1-4 the System can invoke SoundCarbonMonoxideAlarm"
+		use case ends in: SUCCESS
+
+
+use case: SoundHeatAlarm
+scope: SmartFireAlarm
+level: USER_GOAL
+primary actor:   SENSOR::HeatSensor::1..*
+secondary actor: SENSOR::Alarm::1..1
+intention:    "The Smart Fire Alarm System needs to sound an alarm if heat is detected by the sensors."
+multiplicity: "The Smart Fire Alarm System can only have one alarm being triggered at a given time."
+main success scenario:
+	1. "HeatSensor informs System that excess smoke has been detected."        
+	2. "System requests Alarm to be triggered."                                                          
+	3. "Alarm acknowledges to System that the Alarm has turned on."  
+	4. [NotifySprinklerSystem] "System communicates with the Sprinkler System to reduce the temperature threshold"  
+	5. [ChangeDisplayColour]   "System communicates with the Display to change it to yellow and display Heat Detected"       
+	"If Alarm is not turned off within 2 minutes proceed to next step"   
+	6. [FireResponse] "Systems response to a fire"
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {HARDWARE_EXCEPTION::HeatSensorFailure} "The heat sensor is not working as intended"
+		use case continues at step: 2
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::AlarmFailure} "The alarm is not making a sound"
+		use case continues at step: 4
+     
+           
+use case: SoundSmokeAlarm  
+scope: SmartFireAlarm
+level: SUB_FUNCTION  
+primary actor:   SENSOR::SmokeSensor::1..*
+secondary actor: SENSOR::Alarm::1..1
+intention:    "The Smart Fire Alarm System needs to sound an alarm if smoke is detected by the sensors."
+multiplicity: "The Smart Fire Alarm System can only have one alarm being triggered at a given time."
+main success scenario:
+	1. "SmokeSensor informs System that excess smoke has been detected."        
+	2. "System requests Alarm to be triggered."                                                          
+	3. "Alarm acknowledges to System that the Alarm has turned on."
+	4. [NotifySprinklerSystem] "System communicates with the Sprinkler System to reduce the temperature threshold"  
+	5. [ChangeDisplayColour]   "System communicates with the Display to change it to yellow and display Smoke Detected"       
+	"If Alarm is not turned off within 2 minutes proceed to next step"           
+	6. [FireResponse] "Systems response to a fire"
+use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {HARDWARE_EXCEPTION::SmokeSensorFailure} "The smoke sensor is not working as intended"
+		use case continues at step: 2
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::AlarmFailure} "The alarm is not making a sound"
+		use case continues at step: 4
+           
+           
+use case: SoundCarbonMonoxideAlarm 
+scope: SmartFireAlarm
+level: SUB_FUNCTION  
+primary actor:   SENSOR::CarbonMonoxideSensor::1..*
+secondary actor: SENSOR::Alarm::1..1
+intention:    "The Smart Fire Alarm System needs to sound an alarm if carbon monoxide is detected by the sensor."
+multiplicity: "The Smart Fire Alarm System can only have one alarm being triggered at a given time."
+main success scenario:
+	1. "CarbonMonoxideSensor informs System that excess smoke has been detected."        
+	2. "System requests Alarm to be triggered."                                                          
+	3. "Alarm acknowledges to System that the Alarm has turned on."        
+	"If Alarm is not turned off within 2 minutes proceed to next step"   
+	4. [FireResponseCarbonMonoxideSensor] "Systems response to carbon monoxide"
+use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {HARDWARE_EXCEPTION::CarbonMonoxideSensorFailure} "The carbon monoxide sensor is not working as intended"
+		use case continues at step: 2
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::AlarmFailure} "The alarm is not making a sound"
+		use case continues at step: 4      
+     
+         
+use case: FireResponse
+scope: SmartFireAlarm
+level: SUB_FUNCTION
+primary actor:   None
+secondary actor: SENSOR::HeatSensor::1..*, SENSOR::SmokeSensor::1..*
+intention:    "The Smart Fire Alarm System needs to alert the fire department and the user when a heat or smoke is detected."
+multiplicity: "Only one alert can be sent at a given time."
+main success scenario:                                                                         
+	1. [AlertFireDepartment]   "System notifies the fire department about the fire and smoke from the HeatSensor and SmokeSensor"
+	2. [ChangeDisplayColour]   "System communicates with the Display to change it to red"                                                                                                                                                           
+	3. [AlertUser]             "System alerts the user about the fire"
+	4. [OpenEmergencyDoor]     "System requests the emergency door to unlock"
+	use case ends in: SUCCESS
+
+
+use case: FireResponseCarbonMonoxideSensor
+scope: SmartFireAlarm
+level: SUB_FUNCTION
+primary actor:   SENSOR::CarbonMonoxideSensor::1..*
+secondary actor: None
+intention:    "The Smart Fire Alarm System needs to alert the fire department and the user when carbon monoxide is detected."
+multiplicity: "Only one alert can be sent at a given time."
+main success scenario:                                                                       
+	1. [AlertFireDepartment]   "System notifies the fire department about the Carbon Monoxide Levels from the CarbonMonoxideSensor"
+	2. [ChangeDisplayColour]   "System communicates with the Display to change it to red"                                                                                                                                                                
+	3. [AlertUser]             "System alerts the user about the Carbon Monoxide"
+	4. [OpenEmergencyDoor]     "System requests the emergency door to unlock"
+	use case ends in: SUCCESS
+
+
+use case: NotifySprinklerSystem
+scope: SmartFireAlarm
+level: SUB_SUB_FUNCTION
+primary actor: N/A 
+secondary actor: SOFTWARE::SprinklerSystem::1..1
+intention: 
+	"When the alarm is triggered the System should communicate with the Sprinkler System request
+	 it to lower the temperature threshold at which the sprinkler is triggered."
+multiplicity: "Many sprinkler's can be adjusted at any one time."
+main success scenario:
+	1. "System sends a message to the SprinklerSystem to decrease the temperature threshold."
+	2. "SprinklerSystem acknowledges that the temperature threshold has been reduced."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. ^ timeout:60s "SprinklerSystem fails to acknowledge that the temperature threshold has been reduced within 1 minute."
+		2a.1. {NETWORK_EXCEPTION::SprinklerSystemUnreachable} ""
+		use case continues at step: 2
+	exception for 2:
+		2b. {SOFTWARE_EXCEPTION::SprinklerSystemUnavailable} "Sprinkler System informs system that software is down"
+		use case continues at step: 2
+
+
+use case: AlertFireDepartment
+scope: SmartFireAlarm
+level: SUB_SUB_FUNCTION
+primary actor:   N/A
+secondary actor:   SOFTWARE::FireDepartment::1..1, HUMAN::FireMarshals::1..*
+facilitator actor: SOFTWARE::CentralMonitoringStation
+intention:    "When the alarm goes off the System needs to alert the Fire Department."
+multiplicity: "The Smart Fire Alarm System notifies the Fire Department only once at a given time."
+main success scenario:
+	1. "System notifies the FireDepartment by sending a message to the CentralMonitoringStation."
+	2. "Central Monitoring Station acknowledges to System that notification has been received."  
+	"FireMarshals are dispatched to the scene."                                                      
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a.^ timeout:60s "System fails to receive acknowledgement from
+		                  the CentralMonitoringStation within 1 minute."
+		2a.1. {NETWORK_EXCEPTION::CenteralMonitoringStationUnreachable} ""
+		use case continues at step: 2
+	exception for 2:
+		2b. {SOFTWARE_EXCEPTION::CenteralMonitoringStationUnavailable} "Central Monitoring Station informs system that software is down"
+		use case continues at step: 2
+
+
+use case: ChangeDisplayColour
+scope: SmartFireAlarm
+level: SUB_SUB_FUNCTION
+primary actor: N/A
+secondary actor: PHYSICAL_ENTITY::Display::1..*, SENSOR::Alarm::1..1
+intention:    "When the alarm goes off the System needs to change the color of the display to yellow or red."
+multiplicity: "The display can only be set to one colour at a time."
+main success scenario:
+	1. "System requests Display to change colour to red."
+	2. "Display checks if Alarm is sounding."  
+	3. "Display acknowledges that colour has been changed."
+	"Display waits for System to acknowledges emergency is over."
+	4. "System requests display to change the colour back to green."
+	5. "Display acknowledges that colour has been changed."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System requests Display to change colour to yellow."
+		use case continues at step: 2
+	alternative for 3:
+		3a. "Display informs System that Alarm is not triggered."
+		use case ends in: FAILURE
+	exception for 3:    
+		3b.^ timeout:60s "Display fails to acknowledge that color has been changed within 1 minute."   
+		3b.1. {HARDWARE_EXCEPTION::DisplayColorChange} ""
+		use case continues at step: 4
+	exception for 5:
+		5a.^ timeout:60s "Display fails to acknowledge that color has been changed within 1 minute."   
+		5a.1. {HARDWARE_EXCEPTION::DisplayColorRevert} ""
+		use case continues at step: 5
+
+
+use case: AlertUser
+scope: SmartFireAlarm
+level: SUB_SUB_FUNCTION
+primary actor:     N/A
+secondary actor:   HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention:    "When the alarm goes off the System needs to alert the User."
+multiplicity: "The Smart Fire Alarm System keeps notifying for 5 minutes until the notification is acknowledged."
+main success scenario:
+	"Repeat step 1 every 30 seconds for a total time of 5 minutes."                              
+	1. "System notifies User through the MobileDevice."                                                              
+	2. "User acknowledges notification to the System through the mobile device within 5 minutes."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {NETWORK_EXCEPTION::UserUnavailable} "System fails to receive acknowledgement from the User within the required time."
+		use case continues at step: 2
+
+
+use case: OpenEmergencyDoor
+scope: SmartFireAlarm
+level: SUB_SUB_FUNCTION
+primary actor:   N/A
+secondary actor: PHYSICAL_ENTITY::Door::0..*
+intention:    "When the alarm goes off the System needs to remotely unlock all the emergency doors."
+multiplicity: "Multiple doors can be unlocked at any given time."
+main success scenario:
+	1. "System requests Door to unlock."
+	2. "Door acknowledges that it has been unlocked."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a.^ timeout:60s "Door fails to acknowledge to system within 1 minute."   
+		2a.1. {HARDWARE_EXCEPTION::DoorNotWorking} ""
+		use case continues at step: 2
+	exception for 2:
+		2b. {ENVIRONMENT_EXCEPTION::DoorBlocked} "Door informs System that an object is blocking the door. "            
+		use case continues at step: 2
+ 
+ 
+use case: SystemMaintenance
+scope: SmartFireAlarm
+level: USER_GOAL
+primary actor:   HUMAN::User::1..*
+secondary actor: SOFTWARE::SettingsSoftware::1..1                                              
+intention:
+	"After authentication, the System should let the User configure system settings such as the contact
+	 details and type of alarm that will sound. It should also let the User replace faulty parts."
+multiplicity: "Multiple settings or sensors can be changed at once."
+main success scenario:
+	"Step 1 can be repeated 3 times."                                                              
+	1. "User authenticates with System by providing a password."  
+	"User replaces battery and/or faulty sensor."
+	2. "User updates System settings."                                                              
+	3. "System refreshes SettingsSoftware to sync new changes."                    
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a.^ timeout: 5min "System authentication time-out for 5 minutes."
+		use case ends in: FAILURE
+
+
+use case: TestComponents
+scope: SmartFireAlarm
+level: SUB_FUNCTION
+primary actor:   N/A
+secondary actor: 
+	SENSOR::HeatSensor::1..*,
+	SENSOR::SmokeSensor::1..*,
+	SENSOR::CarbonMonoxideSensor::1..*,
+	SENSOR::IntelligentBatterySensor::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: 
+	"The System should detect low battery level and any sensor failures and immediately
+	 notify the User through the mobile device."
+multiplicity: "Many failures can be detected at any given time."
+main success scenario:
+	1. "System checks Battery level using the IntelligentBatterySensor."                                                                                                              
+	2. "System notifies the User that the Battery level is below 20% through the MobileDevice."              
+	3. "System runs diagnostic tests on the HeatSensor,SmokeSensor and the CarbonMonoxideSensor."                                  
+	4. "System finds which sensor is failing and notifies the User through the MobileDevice."    
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::BatteryLevelNotFound} "System unable to retrieve battery level."  
+		use case continues at step: 2
+	alternative for 2:
+		2b."System check battery level and the level is at or above 20%."
+		use case continues at step: 3
+	alternative for 4:
+		4a. "Diagnostic test shows all the sensors are working properly."
+		use case ends in: SUCCESS
+	exception for 4:
+		4b. {NETWORK_EXCEPTION::UserUnavailable} "System fails to connect with user"
+		use case continues at step: 4
+
+
+use case: TurnOffAlarm
+scope: SmartFireAlarm
+level: USER_GOAL
+primary actor: HUMAN::User::1..*
+secondary actor: 
+	SENSOR::Alarm::1..1,
+	SENSOR::HeatSensor::1..*,
+	SENSOR::SmokeSensor::1..*,
+	SENSOR::CarbonMonoxideSensor::1..*,
+	HUMAN::FireMarshal::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention:    "The User and FireMarshal should be able to manually turn off the Alarm."
+multiplicity: "The Alarm can only be turned off once at a given time."
+main success scenario:
+	1. "The User or the FireMarshal manually request the System to turn off the Alarm by pressing the off button."
+	2. "System resets the Alarm, HeatSensor,SmokeSensor and the CarbonMonoxideSensor."
+	3. "System notifies User through the MobileDevice that the alarm has been turned off."
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {HARDWARE_EXCEPTION::ButtonFailure} "The Button does not turn off the alarm when pressed"
+		use case continues at step: 1
+
+/**** Handlers ****/
+
+handler use case: ReconnectToNetwork
+scope: SmartFireAlarm
+contexts and exceptions: 
+	UseSmartFireAlarmSystem{ENVIRONMENT_EXCEPTION::PowerOutage}, 
+	UseSmartFireAlarmSystem{ENVIRONMENT_EXCEPTION::CyberAttack}, 
+	UseSmartFireAlarmSystem{NETWORK_EXCEPTION::NoInternet}
+primary actor:   None
+secondary actor: HUMAN::User::1..*
+intention: 
+	"To handle a power outage or cyber-attack that prevents the system from connecting 
+	 to the internet."
+level: SUB_FUNCTION
+main success scenario:
+	mode switch: NoInternet
+	"Step 1 can be repeated 3 times."
+	1. "System tries to reconnect to the network."  
+	mode switch: Normal                                          
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System is unable to connect with network."
+		1a.1. "System informs the User of the network issue by sending a SMS"
+		"User fixes the network issue"
+		1a.2. "User presses the reset button on the device to reconnect it with the network"
+		nested extensions begin:
+			alternative for 1a.2:
+				1a.2a. "System is unable to connect with network."
+				use case continues at Step: 1a.1
+			alternative for 1a.2:      
+				1a.2b. "System connects with network."
+				mode switch: Normal
+				use case ends in: SUCCESS
+		nested extensions ends  
+
+
+handler use case:  WarnUser
+scope: SmartFireAlarm
+contexts and exceptions: 
+	OpenEmergencyDoor{ENVIRONMENT_EXCEPTION::DoorBlocked}
+primary actor:     None
+secondary actor:   HUMAN::User::1..*, PHYSICAL_ENTITY::EmergencyDoor::0..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..* 
+intention: "To warn the user that the emergency door is blocked"   
+level: SUB_FUNCTION
+main success scenario:
+	1. "System informs User through the MobileDevice that the EmergencyDoor is blocked."        
+	"User removes item blocking the EmergencyDoor"
+	2. "User informs the System through the MobileDevice that the EmergencyDoor has been cleared"
+	use case ends in: SUCCESS
+
+
+handler use case: RunSmokeSensorHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions: 
+	SoundSmokeAlarm{HARDWARE_EXCEPTION::SmokeSensorFailure}              
+primary actor:     None
+secondary actor:   SENSOR::SmokeSensor::1..*, HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the smoke sensor."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the SmokeSensor"
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the SmokeSensor."
+		1a.1. "System informs User of failure through the MobileDevice."
+		"User replaces the faulty sensor"
+		1a.2. "User informs System through the MobileDevice that they have changed a component."
+		"System refreshes software for components to sync new changes"
+		1a.3. "System runs diagnostic tests on the SmokeSensor that was replaced."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed"
+				use case continues at Step: 1a.1  
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: RunHeatSensorHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions: 
+	SoundHeatAlarm{HARDWARE_EXCEPTION::HeatSensorFailure}                               
+primary actor:     None
+secondary actor:   SENSOR::HeatSensor::1..*, HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the heat sensor."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the HeatSensor."      
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the HeatSensor."
+		1a.1. "System informs User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs System through the MobileDevice that they have changed a component."
+		"System refreshes software for components to sync new changes"
+		1a.3. "System runs diagnostic tests on the HeatSensor."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed"
+				use case continues at Step: 1a.1  
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: RunAlarmHardwareTest   
+scope: SmartFireAlarm
+contexts and exceptions:
+	SoundHeatAlarm{HARDWARE_EXCEPTION::AlarmFailure},
+	SoundSmokeAlarm{HARDWARE_EXCEPTION::AlarmFailure},
+	SoundCarbonMonoxideAlarm{HARDWARE_EXCEPTION::AlarmFailure}                               
+primary actor:     None
+secondary actor:   SENSOR::Alarm::1..1, HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the alarm."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the Alarm."  
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the Alarm."
+		1a.1. "System informs User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs System through the MobileDevice that they have changed a component."
+		"System refreshes software for components to sync new changes"
+		1a.3. "System runs diagnostic tests on the Alarm that was replaced."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed"
+				use case continues at Step: 1a.1  
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: RunEmergencyDoorHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions:
+	OpenEmergencyDoor{HARDWARE_EXCEPTION::DoorNotWorking}
+primary actor:     None
+secondary actor:   HUMAN::User::1..*, PHYSICAL_ENTITY::Door::0..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the door."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the Door."      
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the Door."                    
+		1a.1. "System informs User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs System through the MobileDevice that they have changed a component."
+		"System refreshes software for components to sync new changes"
+		1a.3. "System runs diagnostic tests on the Door that was replaced."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed"
+				use case continues at Step: 1a.1  
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends          
+
+
+handler use case: RunCarbonMonoxideSensorHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions:
+	SoundCarbonMonoxideAlarm{HARDWARE_EXCEPTION::CarbonMonoxideSensorFailure}
+primary actor:     None
+secondary actor:   SENSOR::CarbonMonoxideSensor::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the carbon monoxide sensor."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the CarbonMonoxideSensor."        
+	use case ends in: SUCCESS                       
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the CarbonMonoxideSensor."
+		1a.1. "System informs the User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs the System through the MobileDevice that they have changed a component."
+		"System refreshes software to sync new changes"
+		1a.3." System runs diagnostic tests on the CarbonMonoxideSensor."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed."
+				use case continues at Step: 1a.1
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: RunButtonHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions:
+	TurnOffAlarm{HARDWARE_EXCEPTION::ButtonFailure}
+primary actor:     None
+secondary actor:   PHYSICAL_ENTITY::Button::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the button."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the Button that timed out."        
+	use case ends in: SUCCESS                       
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the Button."
+		1a.1. "System informs the User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs the System through the MobileDevice that they have changed a component."
+		"System refreshes software to sync new changes"
+		1a.3." System runs diagnostic tests on the Button that was changed."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed."
+				use case continues at Step: 1a.1
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: RunDisplayHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions:
+	ChangeDisplayColour{HARDWARE_EXCEPTION::DisplayColorChange},
+	ChangeDisplayColour{HARDWARE_EXCEPTION::DisplayColorRevert}
+primary actor:     None
+secondary actor:   PHYSICAL_ENTITY::Display::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the Display."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the Display."        
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the Display."
+		1a.1. "System informs the User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs the System through the MobileDevice that they have changed a component."
+		"System refreshes software to sync new changes"
+		1a.3." System runs diagnostic tests on the Display."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed."
+				use case continues at Step: 1a.1
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+
+handler use case: ContactUser
+scope: SmartFireAlarm
+contexts and exceptions:
+	AlertUser{NETWORK_EXCEPTION::UserUnavailable},
+	TestComponents{NETWORK_EXCEPTION::UserUnavailable}
+primary actor:   None
+secondary actor: HUMAN::User::1..*, HUMAN::EmergencyContact::1..*
+intention: "To try to connect with the user and send them notifications."
+level: SUB_FUNCTION
+main success scenario:
+	"Step 1 can be repeated 3 times."
+	1. "System resends notification to the User."    
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System is unable to communicate with the User."
+		1a.1. "System sends SMS to the EmergencyContact."
+		use case ends in: FAILURE
+
+
+handler use case: ReconnectSprinklerToNetwork
+scope: SmartFireAlarm
+contexts and exceptions:
+	NotifySprinklerSystem{NETWORK_EXCEPTION::SprinklerSystemUnreachable}
+primary actor:     None
+secondary actor:   HUMAN::User::1..*, SOFTWARE::SprinklerSystem::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect network failure."
+level: SUB_FUNCTION
+main success scenario:        
+	"Step 1 can be repeated 3 times."
+	1. "System tries to reconnect to the SprinklerSystem."        
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System is unable to connect to SprinklerSystem"
+		1a.1. "System informs User of the network issue through the MobileDevice."  
+		use case ends in: FAILURE            
+
+
+handler use case: ReconnectFDToNetwork
+scope: SmartFireAlarm
+contexts and exceptions:
+	AlertFireDepartment{NETWORK_EXCEPTION::CenteralMonitoringStationUnreachable}
+primary actor:     None
+secondary actor:   HUMAN::User::1..*, SOFTWARE::CentralMonitoringStation::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect network failures."
+level: SUB_FUNCTION
+main success scenario:        
+	mode switch: NoAlert
+	"Step 1 can be repeated 3 times."
+	1. "System tries to reconnect to the CentralMonitoringStation ."   
+	mode switch: Normal     
+	use case ends in: SUCCESS                          
+extensions:
+	alternative for 1:
+		1a. "System is unable to connect to CentralMonitoringStation."
+		1a.1. "System informs User of the network issue through the MobileDevice."    
+		use case ends in: FAILURE
+
+
+handler use case: RunIBSHardwareTest
+scope: SmartFireAlarm
+contexts and exceptions:
+	TestComponents{HARDWARE_EXCEPTION::BatteryLevelNotFound}
+primary actor:     None
+secondary actor:   SENSOR::IntelligentBatterySensor::1..1, HUMAN::User::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..*
+intention: "To detect hardware failure of the Intelligent Battery Sensor."
+level: SUB_FUNCTION
+main success scenario:
+	1. "System runs diagnostic tests on the IntelligentBatterySensor."      
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		1a. "System detects failure in the IntelligentBatterySensor."
+		1a.1. "System informs User of failure through the MobileDevice."
+		"User replaces faulty component"
+		1a.2. "User informs System through the MobileDevice that they have changed a component."
+		"System refreshes software for components to sync new changes"
+		1a.3. "System runs diagnostic tests on the IntelligentBatterySensor."
+		nested extensions begin:
+			alternative for 1a.3:
+				1a.3a. "Diagnostic test failed"
+				use case continues at Step: 1a.1  
+			alternative for 1a.3:
+				1a.3b. "Diagnostic test passed"
+				use case ends in: SUCCESS
+		nested extensions ends
+
+

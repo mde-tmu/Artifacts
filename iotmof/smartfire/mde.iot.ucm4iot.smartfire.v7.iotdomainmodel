@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iotdomainmodel:IoTDomainModel xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotdomainmodel="http://www.ucm4iot.org/mde/iot/iotdomainmodel" xmlns:xmi="http://www.omg.org/XMI">
+	<devices xsi:type="iotdomainmodel:Sensor" name="HeatSensor"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="Alarm"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="SmokeSensor"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="CarbonMonoxideSensor"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="IntelligentBatterySensor"/>
+	<physicalEntities name="MobileDevice"/>
+	<physicalEntities name="Display"/>
+	<physicalEntities name="Door"/>
+	<physicalEntities name="EmergencyDoor"/>
+	<physicalEntities name="Button"/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="User" interactsWith="//@devices.1" invokes="//@users.8 //@users.9"/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="FireMarshals" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="FireMarshal" interactsWith="//@devices.1" invokes=""/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="EmergencyContact" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="SprinklerSystem" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="FireDepartment" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="CentralMonitoringStation" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="SettingsSoftware" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:Service" name="SystemMaintenance" interactsWith="" invokes=""/>
+	<users xsi:type="iotdomainmodel:Service" name="TurnOffAlarm" interactsWith="" invokes=""/>
+</iotdomainmodel:IoTDomainModel>

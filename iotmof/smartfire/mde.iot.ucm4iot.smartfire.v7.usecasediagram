@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usecasediagram:UseCaseDiagram xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usecasediagram="http://www.ucm4iot.org/mde/iot/usecasediagram" xmlns:xmi="http://www.omg.org/XMI">
+	<actors xsi:type="usecasediagram:HumanActor" name="User" lowerBound="1" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.9 //@scopes.0/@usecases.11 //@scopes.0/@usecases.13 //@scopes.0/@usecases.14 //@scopes.0/@usecases.15 //@scopes.0/@usecases.16 //@scopes.0/@usecases.17 //@scopes.0/@usecases.18 //@scopes.0/@usecases.19 //@scopes.0/@usecases.23 //@scopes.0/@usecases.24 //@scopes.0/@usecases.25 //@scopes.0/@usecases.26" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="MobileDevice" lowerBound="1" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.9 //@scopes.0/@usecases.12 //@scopes.0/@usecases.13 //@scopes.0/@usecases.15 //@scopes.0/@usecases.16 //@scopes.0/@usecases.17 //@scopes.0/@usecases.18 //@scopes.0/@usecases.19 //@scopes.0/@usecases.20 //@scopes.0/@usecases.21 //@scopes.0/@usecases.22 //@scopes.0/@usecases.24 //@scopes.0/@usecases.25 //@scopes.0/@usecases.26" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="HeatSensor" lowerBound="1" usecase="//@scopes.0/@usecases.1 //@scopes.0/@usecases.4 //@scopes.0/@usecases.12 //@scopes.0/@usecases.13 //@scopes.0/@usecases.17" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="Alarm" lowerBound="1" usecase="//@scopes.0/@usecases.1 //@scopes.0/@usecases.2 //@scopes.0/@usecases.3 //@scopes.0/@usecases.8 //@scopes.0/@usecases.13 //@scopes.0/@usecases.18" upperBound="1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="SmokeSensor" lowerBound="1" usecase="//@scopes.0/@usecases.2 //@scopes.0/@usecases.4 //@scopes.0/@usecases.12 //@scopes.0/@usecases.13 //@scopes.0/@usecases.16" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="CarbonMonoxideSensor" lowerBound="1" usecase="//@scopes.0/@usecases.3 //@scopes.0/@usecases.5 //@scopes.0/@usecases.12 //@scopes.0/@usecases.13 //@scopes.0/@usecases.20" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="SprinklerSystem" lowerBound="1" usecase="//@scopes.0/@usecases.6 //@scopes.0/@usecases.24" upperBound="1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="FireDepartment" lowerBound="1" usecase="//@scopes.0/@usecases.7" upperBound="1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="FireMarshals" lowerBound="1" usecase="//@scopes.0/@usecases.7" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="CentralMonitoringStation" lowerBound="-1" usecase="//@scopes.0/@usecases.7 //@scopes.0/@usecases.25" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="Display" lowerBound="1" usecase="//@scopes.0/@usecases.8 //@scopes.0/@usecases.22" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="Door" lowerBound="0" usecase="//@scopes.0/@usecases.10 //@scopes.0/@usecases.19" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="SettingsSoftware" lowerBound="1" usecase="//@scopes.0/@usecases.11" upperBound="1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="IntelligentBatterySensor" lowerBound="1" usecase="//@scopes.0/@usecases.12 //@scopes.0/@usecases.26" upperBound="1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="FireMarshal" lowerBound="1" usecase="//@scopes.0/@usecases.13" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="EmergencyDoor" lowerBound="0" usecase="//@scopes.0/@usecases.15" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="Button" lowerBound="1" usecase="//@scopes.0/@usecases.21" upperBound="1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="EmergencyContact" lowerBound="1" usecase="//@scopes.0/@usecases.23" upperBound="-1"/>
+	<scopes name="SmartFireAlarm">
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="UseSmartFireAlarmSystem">
+			<includes includedCase="//@scopes.0/@usecases.11"/>
+			<includes includedCase="//@scopes.0/@usecases.12"/>
+			<includes includedCase="//@scopes.0/@usecases.13"/>
+			<includes includedCase="//@scopes.0/@usecases.1"/>
+			<includes includedCase="//@scopes.0/@usecases.2"/>
+			<includes includedCase="//@scopes.0/@usecases.3"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="SoundHeatAlarm">
+			<includes includedCase="//@scopes.0/@usecases.6"/>
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+			<includes includedCase="//@scopes.0/@usecases.4"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="SoundSmokeAlarm">
+			<includes includedCase="//@scopes.0/@usecases.6"/>
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+			<includes includedCase="//@scopes.0/@usecases.4"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="SoundCarbonMonoxideAlarm">
+			<includes includedCase="//@scopes.0/@usecases.5"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="FireResponse">
+			<includes includedCase="//@scopes.0/@usecases.7"/>
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+			<includes includedCase="//@scopes.0/@usecases.9"/>
+			<includes includedCase="//@scopes.0/@usecases.10"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="FireResponseCarbonMonoxideSensor">
+			<includes includedCase="//@scopes.0/@usecases.7"/>
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+			<includes includedCase="//@scopes.0/@usecases.9"/>
+			<includes includedCase="//@scopes.0/@usecases.10"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="NotifySprinklerSystem"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="AlertFireDepartment"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ChangeDisplayColour"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="AlertUser"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="OpenEmergencyDoor"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="SystemMaintenance"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="TestComponents"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="TurnOffAlarm"/>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ReconnectToNetwork">
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.0" exceptions="//@scopes.0/@exceptions.13 //@scopes.0/@exceptions.14 //@scopes.0/@exceptions.0"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="WarnUser">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.10" exceptions="//@scopes.0/@exceptions.15"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunSmokeSensorHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.2" exceptions="//@scopes.0/@exceptions.4"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunHeatSensorHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.1" exceptions="//@scopes.0/@exceptions.5"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunAlarmHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.1" exceptions="//@scopes.0/@exceptions.7"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.2" exceptions="//@scopes.0/@exceptions.7"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.3" exceptions="//@scopes.0/@exceptions.7"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunEmergencyDoorHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.10" exceptions="//@scopes.0/@exceptions.9"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunCarbonMonoxideSensorHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.3" exceptions="//@scopes.0/@exceptions.6"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunButtonHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.13" exceptions="//@scopes.0/@exceptions.8"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunDisplayHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.8" exceptions="//@scopes.0/@exceptions.10 //@scopes.0/@exceptions.11"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ContactUser">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.9" exceptions="//@scopes.0/@exceptions.1"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.12" exceptions="//@scopes.0/@exceptions.1"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ReconnectSprinklerToNetwork">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.6" exceptions="//@scopes.0/@exceptions.2"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ReconnectFDToNetwork">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.7" exceptions="//@scopes.0/@exceptions.3"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RunIBSHardwareTest">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.12" exceptions="//@scopes.0/@exceptions.12"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="Rename">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.7" exceptions="//@scopes.0/@exceptions.16"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.6" exceptions="//@scopes.0/@exceptions.17"/>
+		</usecases>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="NoInternet"/>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="UserUnavailable"/>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="SprinklerSystemUnreachable"/>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="CenteralMonitoringStationUnreachable"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="SmokeSensorFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="HeatSensorFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="CarbonMonoxideSensorFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="AlarmFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="ButtonFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="DoorNotWorking"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="DisplayColorChange"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="DisplayColorRevert"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="BatteryLevelNotFound"/>
+		<exceptions xsi:type="usecasediagram:EnvironmentException" name="PowerOutage"/>
+		<exceptions xsi:type="usecasediagram:EnvironmentException" name="CyberAttack"/>
+		<exceptions xsi:type="usecasediagram:EnvironmentException" name="DoorBlocked"/>
+		<exceptions xsi:type="usecasediagram:SoftwareException" name="CenteralMonitoringStationUnavailable"/>
+		<exceptions xsi:type="usecasediagram:SoftwareException" name="SprinklerSystemUnavailable"/>
+	</scopes>
+</usecasediagram:UseCaseDiagram>
