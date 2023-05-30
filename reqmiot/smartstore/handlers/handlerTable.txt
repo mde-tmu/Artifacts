@@ -1,0 +1,104 @@
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| Handlers         | Dependent Use Cases    | Handled Exceptions                           | Actors                              |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| HandleFireHazard | Shopping               | ENVIRONMENT_EXCEPTION::FireHazard            | HUMAN::Customer                     |
+|                  |                        |                                              | SOFTWARE::FireDetectionSystem*      |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | MaintainStore          | ENVIRONMENT_EXCEPTION::FireHazard            | SOFTWARE::Staff                     |
+|                  |                        |                                              | SOFTWARE::FireDetectionSystem*      |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | ExitStore              | ENVIRONMENT_EXCEPTION::FireHazard            | HUMAN::Customer                     |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | SOFTWARE::FireDetectionSystem*      |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | CheckOut               | ENVIRONMENT_EXCEPTION::FireHazard            | HUMAN::Staff                        |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | PHYSICAL_ENTITY::MobileDevice       |
+|                  |                        |                                              | SOFTWARE::FireDetectionSystem*      |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| AlertOnAttack    | Shopping               | ENVIRONMENT_EXCEPTION::CriminalAttack        | HUMAN::Customer                     |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  |                        |                                              | PHYSICAL_ENTITY::EmergencyExit*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate*          |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate*         |
+|                  |                        |                                              | PHYSICAL_ENTITY::PoliceStation*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::AttackAlertSwitch* |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | MaintainStore          | ENVIRONMENT_EXCEPTION::CriminalAttack        | SOFTWARE::Staff                     |
+|                  |                        |                                              | HUMAN::Customer*                    |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  |                        |                                              | PHYSICAL_ENTITY::EmergencyExit*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate*          |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate*         |
+|                  |                        |                                              | PHYSICAL_ENTITY::PoliceStation*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::AttackAlertSwitch* |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | ExitStore              | ENVIRONMENT_EXCEPTION::CriminalAttack        | HUMAN::Customer                     |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | HUMAN::Staff*                       |
+|                  |                        |                                              | PHYSICAL_ENTITY::EmergencyExit*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate*         |
+|                  |                        |                                              | PHYSICAL_ENTITY::PoliceStation*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::AttackAlertSwitch* |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | CheckOut               | ENVIRONMENT_EXCEPTION::CriminalAttack        | HUMAN::Staff                        |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | PHYSICAL_ENTITY::MobileDevice       |
+|                  |                        |                                              | HUMAN::Customer*                    |
+|                  |                        |                                              | PHYSICAL_ENTITY::EmergencyExit*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate*         |
+|                  |                        |                                              | PHYSICAL_ENTITY::PoliceStation*     |
+|                  |                        |                                              | PHYSICAL_ENTITY::AttackAlertSwitch* |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| ServiceGate      | ExitStore              | HARDWARE_EXCEPTION::ExitFailure              | HUMAN::Customer                     |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | HUMAN::ServicePerson*               |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | EnterStore             | HARDWARE_EXCEPTION::EntryFailure             | HUMAN::Customer                     |
+|                  |                        |                                              | DEVICE::Camera                      |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate          |
+|                  |                        |                                              | HUMAN::ServicePerson*               |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | CheckIn                | HARDWARE_EXCEPTION::EntryFailure             | HUMAN::Staff                        |
+|                  |                        |                                              | DEVICE::Camera                      |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate          |
+|                  |                        |                                              | HUMAN::ServicePerson*               |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | CheckOut               | HARDWARE_EXCEPTION::ExitFailure              | HUMAN::Staff                        |
+|                  |                        |                                              | PHYSICAL_ENTITY::ExitGate           |
+|                  |                        |                                              | PHYSICAL_ENTITY::MobileDevice       |
+|                  |                        |                                              | HUMAN::ServicePerson*               |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| HoldPayment      | PayBill                | SOFTWARE_EXCEPTION::PaymentServiceDown       | SOFTWARE::PaymentService            |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| RequestUser      | EnterStore             | HARDWARE_EXCEPTION::CameraFailure            | HUMAN::Customer                     |
+|                  |                        |                                              | DEVICE::Camera                      |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate          |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | CheckIn                | HARDWARE_EXCEPTION::CameraFailure            | HUMAN::Staff                        |
+|                  |                        |                                              | DEVICE::Camera                      |
+|                  |                        |                                              | PHYSICAL_ENTITY::EntryGate          |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| RequestCamera    | RecognizeCustomer      | SOFTWARE_EXCEPTION::ImageUnmatched           | DEVICE::Camera                      |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | RecognizeStaff         | SOFTWARE_EXCEPTION::ImageUnmatched           | DEVICE::Camera                      |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | RemoveItem             | SOFTWARE_EXCEPTION::ImageUnmatched           | DEVICE::Camera*                     |
+|                  +------------------------+----------------------------------------------+-------------------------------------+
+|                  | RestockShelves         | SOFTWARE_EXCEPTION::ImageUnmatched           | HUMAN::Staff                        |
+|                  |                        |                                              | DEVICE::Camera*                     |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| GetResponse      | ScanMobileDeviceOnExit | NETWORK_EXCEPTION::CustomerUnreachable       | SOFTWARE::PaymentService            |
+|                  |                        |                                              | HUMAN::Customer                     |
+|                  |                        |                                              | PHYSICAL_ENTITY::MobileDevice       |
+|                  |                        |                                              | PHYSICAL_ENTITY::CreditCard         |
++------------------+------------------------+----------------------------------------------+-------------------------------------+
+| ServiceSensor    | IdentifyItem           | HARDWARE_EXCEPTION::TagUnavailable           | DEVICE::PressureSensor              |
+|                  |                        | HARDWARE_EXCEPTION::PressureSensorUndetected | DEVICE::WeightSensor                |
+|                  |                        | HARDWARE_EXCEPTION::WeightSensorUnavailable  | DEVICE::TagReader                   |
+|                  |                        |                                              | HUMAN::ServicePerson*               |
+|                  |                        |                                              | HUMAN::Staff*                       |
++------------------+------------------------+----------------------------------------------+-------------------------------------+

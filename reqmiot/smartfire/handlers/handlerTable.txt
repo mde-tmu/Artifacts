@@ -1,0 +1,93 @@
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| Handlers                            | Dependent Use Cases      | Handled Exceptions                                       | Actors                             |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| ReconnectToNetwork                  | UseSmartFireAlarmSystem  | ENVIRONMENT_EXCEPTION::PowerOutage                       | HUMAN::User                        |
+|                                     |                          | ENVIRONMENT_EXCEPTION::CyberAttack                       | PHYSICAL_ENTITY::MobileDevice      |
+|                                     |                          | NETWORK_EXCEPTION::NoInternet                            |                                    |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| WarnUser                            | OpenEmergencyDoor        | ENVIRONMENT_EXCEPTION::DoorBlocked                       | PHYSICAL_ENTITY::Door              |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::EmergencyDoor*    |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunSmokeSensorHardwareTest          | SoundSmokeAlarm          | HARDWARE_EXCEPTION::SmokeSensorFailure                   | DEVICE::SmokeSensor                |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunHeatSensorHardwareTest           | SoundHeatAlarm           | HARDWARE_EXCEPTION::HeatSensorFailure                    | DEVICE::HeatSensor                 |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunAlarmHardwareTest                | SoundHeatAlarm           | HARDWARE_EXCEPTION::AlarmFailure                         | DEVICE::HeatSensor                 |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
+|                                     +--------------------------+----------------------------------------------------------+------------------------------------+
+|                                     | SoundSmokeAlarm          | HARDWARE_EXCEPTION::AlarmFailure                         | DEVICE::SmokeSensor                |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
+|                                     +--------------------------+----------------------------------------------------------+------------------------------------+
+|                                     | SoundCarbonMonoxideAlarm | HARDWARE_EXCEPTION::AlarmFailure                         | DEVICE::CarbonMonoxideSensor       |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunEmergencyDoorHardwareTest        | OpenEmergencyDoor        | HARDWARE_EXCEPTION::DoorNotWorking                       | PHYSICAL_ENTITY::Door              |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunCarbonMonoxideSensorHardwareTest | SoundCarbonMonoxideAlarm | HARDWARE_EXCEPTION::CarbonMonoxideSensorFailure          | DEVICE::CarbonMonoxideSensor       |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunButtonHardwareTest               | TurnOffAlarm             | HARDWARE_EXCEPTION::ButtonFailure                        | HUMAN::User                        |
+|                                     |                          |                                                          | DEVICE::Alarm                      |
+|                                     |                          |                                                          | DEVICE::HeatSensor                 |
+|                                     |                          |                                                          | DEVICE::SmokeSensor                |
+|                                     |                          |                                                          | DEVICE::CarbonMonoxideSensor       |
+|                                     |                          |                                                          | HUMAN::FireMarshal                 |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice      |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::Button*           |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunDisplayHardwareTest              | ChangeDisplayColour      | HARDWARE_EXCEPTION::DisplayColorChange                   | PHYSICAL_ENTITY::Display           |
+|                                     |                          | HARDWARE_EXCEPTION::DisplayColorRevert                   | DEVICE::Alarm                      |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| ContactUser                         | AlertUser                | NETWORK_EXCEPTION::UserUnavailable                       | HUMAN::User                        |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice      |
+|                                     |                          |                                                          | HUMAN::EmergencyContact*           |
+|                                     +--------------------------+----------------------------------------------------------+------------------------------------+
+|                                     | TestComponents           | NETWORK_EXCEPTION::UserUnavailable                       | DEVICE::HeatSensor                 |
+|                                     |                          |                                                          | DEVICE::SmokeSensor                |
+|                                     |                          |                                                          | DEVICE::CarbonMonoxideSensor       |
+|                                     |                          |                                                          | DEVICE::IntelligentBatterySensor   |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice      |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | HUMAN::EmergencyContact*           |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| ReconnectSprinklerToNetwork         | NotifySprinklerSystem    | NETWORK_EXCEPTION::SprinklerSystemUnreachable            | SOFTWARE::SprinklerSystem          |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| ReconnectFDToNetwork                | AlertFireDepartment      | NETWORK_EXCEPTION::CenteralMonitoringStationUnreachable  | SOFTWARE::FireDepartment           |
+|                                     |                          |                                                          | HUMAN::FireMarshals                |
+|                                     |                          |                                                          | SOFTWARE::CentralMonitoringStation |
+|                                     |                          |                                                          | HUMAN::User*                       |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice*     |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| RunIBSHardwareTest                  | TestComponents           | HARDWARE_EXCEPTION::BatteryLevelNotFound                 | DEVICE::HeatSensor                 |
+|                                     |                          |                                                          | DEVICE::SmokeSensor                |
+|                                     |                          |                                                          | DEVICE::CarbonMonoxideSensor       |
+|                                     |                          |                                                          | DEVICE::IntelligentBatterySensor   |
+|                                     |                          |                                                          | PHYSICAL_ENTITY::MobileDevice      |
+|                                     |                          |                                                          | HUMAN::User*                       |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+
+| Rename                              | AlertFireDepartment      | SOFTWARE_EXCEPTION::CenteralMonitoringStationUnavailable | SOFTWARE::FireDepartment           |
+|                                     |                          |                                                          | HUMAN::FireMarshals                |
+|                                     |                          |                                                          | SOFTWARE::CentralMonitoringStation |
+|                                     +--------------------------+----------------------------------------------------------+------------------------------------+
+|                                     | NotifySprinklerSystem    | SOFTWARE_EXCEPTION::SprinklerSystemUnavailable           | SOFTWARE::SprinklerSystem          |
++-------------------------------------+--------------------------+----------------------------------------------------------+------------------------------------+

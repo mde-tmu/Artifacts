@@ -1,0 +1,766 @@
+!Standard Mode: off
+!List Modes: 
+	NORMAL::Normal::default, 
+	RESTRICTED::RestrictedEntry, 
+	EMERGENCY::FireEmergency, 
+	EMERGENCY::ExternalAttackEmergency,
+	DEGRADED::Degraded
+
+!List Exceptions: 
+	{HARDWARE_EXCEPTION::PressureSensorUndetected},
+	{HARDWARE_EXCEPTION::WeightSensorUnavailable},
+	{HARDWARE_EXCEPTION::TagUnavailable},
+	{HARDWARE_EXCEPTION::EntryFailure},
+	{HARDWARE_EXCEPTION::ExitFailure},
+	{HARDWARE_EXCEPTION::CameraFailure},
+	{SOFTWARE_EXCEPTION::ImageUnmatched},
+	{NETWORK_EXCEPTION::CustomerUnreachable},
+	{SOFTWARE_EXCEPTION::PaymentServiceDown},
+	{ENVIRONMENT_EXCEPTION::CriminalAttack::global},
+	{ENVIRONMENT_EXCEPTION::FireHazard::global}
+
+
+use case: UseSmartStore
+scope: SmartStoreSystem
+level: SUMMARY
+intention: "The customer intends to use the smart store system for shopping at the smart store."
+multiplicity: "Multiple customers can use the system and shop at the same time."
+primary actor: HUMAN::Customer::1..*
+main success scenario:
+	1. [RegisterCustomer]"Customer does registration to the system."
+	2. [CustomerLogin]"Customer logs in to the system."
+	3. [Shopping] "Customer shops at the store."
+	use case ends in: SUCCESS
+
+
+use case: WorkAtSmartStore
+scope: SmartStoreSystem
+level: SUMMARY
+intention: "The staff intends to use the smart store system for maintaining the smart store."
+multiplicity: "Multiple staff can use the system and maintain the at the same time."
+primary actor: HUMAN::Staff::1..*
+main success scenario:
+	1. [EnrollStaff]"Admin enrolls staff to the system."
+	2. [StaffLogin]"Staff logs in to the system."
+	3. [MaintainStore] "Staff maintains store."
+	use case ends in: SUCCESS
+
+
+use case: CustomerLogin
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The customer login to the system."
+multiplicity: "Multiple customer can login to the system at the same time."
+primary actor: HUMAN::Customer::1..*
+main success scenario:
+	1. "System requests Customer to enter ID and password."
+	2. "Customer enters ID and password into System."
+	 "System validates the entered ID and password."
+	3. "System logs in the Customer."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 3:
+	"Customer enters invalid combination of ID and password."
+	3a."System cannot validate the Customer."
+	use case continues at step: 2
+
+
+use case: StaffLogin
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The staff login to the system."
+multiplicity: "Multiple staff can login to the system at the same time."
+primary actor: HUMAN::Staff::1..*
+main success scenario:
+	1. "System requests Staff to enter ID and password."
+	2. "Staff enters ID and password into System."
+	 "System validates the entered ID and password."
+	3. "System logs in the Staff."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 3:
+	"Customer enters invalid combination of ID and password."
+	3a."System cannot validate the Staff."
+	use case continues at step: 2	 
+	 
+
+use case: Shopping
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The customer intends to shop for items in the smart store."
+multiplicity: "Multiple customers can shop at the same time."
+primary actor: HUMAN::Customer::1..*
+main success scenario:
+	1. [EnterStore] "The customer enters the store"
+	"Step 2 can be repeated according to the intent of the Customer."
+	2. [AddToCart] "The customer adds an item to the cart."
+	3. [ExitStore] "The customer exits the store."
+	use case ends in: SUCCESS
+extensions:
+	exception for (1-3):
+		(1-3)a. {ENVIRONMENT_EXCEPTION::FireHazard} #Fire hazard in the 
+				store. Customer needs to leave the store immediately, and no
+			 new customer can enter.#	
+		use case ends in: FAILURE
+
+	exception for (1-3):
+		(1-3)b. {ENVIRONMENT_EXCEPTION::CriminalAttack} #Store is under attack.
+			 	No new customer can enter.#
+		use case ends in: FAILURE
+	alternative for 2:
+		2a. [ReturnItem] "Customer returns an item."
+		use case continues at step: 3
+	alternative for 2:
+		"Customer does not add anything to the cart."
+		use case continues at step: 3
+
+/* User Goal Level */
+
+use case: RegisterCustomer
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The customer intends to register."
+multiplicity: "Many customers can do registration to the system at a time."
+primary actor: HUMAN::Customer::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..1
+main success scenario:
+	"Customer installs the system's customer application in the MobileDevice"
+	1."System asks Customer to register."
+	2. "System receives Customer's information."
+	3. "System creates an account for the Customer."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+	"Customer is already registered."
+	1a. "System asks the Customer to sign in."
+	use case ends in: SUCCESS
+
+
+use case: EnterStore
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The customer intends to enter the smart store."
+multiplicity: "Only one customer can enter through an entry gate at a time."
+primary actor: HUMAN::Customer::1..*
+secondary actor: SENSOR::Camera::1..*, PHYSICAL_ENTITY::EntryGate::1..1
+main success scenario:
+	1. [ScanMobileDeviceOnEntry] "Customer scans the mobile device at the entry gate."
+	2. "System instructs the EntryGate to open."
+    3. "System instructs Camera to take images."
+    4. "System receives images from Camera."
+    5. "System associates image with the Customer."
+	6. "System instructs the EntryGate to close after 10 seconds."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::EntryFailure} #Entry gate does not open.
+		Customer cannot enter.#
+		use case  continues at step: 1	
+	alternative for 4:
+		"Customer does not enter through the EntryGate."
+		4a. "Camera sends alert to the System."
+		use case ends in: ABANDONED
+	exception for 4:
+		4b. {HARDWARE_EXCEPTION::CameraFailure} #System does not receive usable images 
+			from the camera.#
+		use case continues at step: 4
+	alternative for 6:
+		"Customer did not enter before the EntryGate closes."
+		use case continues at step: 1
+
+	
+use case: RestrictEntry
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The system intends to restrict customers from entering the smart store."
+//multiplicity: "Only one customer can enter through an entry gate at a time."
+primary actor: HUMAN::Customer::1..*
+secondary actor:PHYSICAL_ENTITY::EntryGate::1..1
+main success scenario:
+mode switch: RestrictedEntry
+	1. [ScanMobileDeviceOnEntry] "Customer scans the mobile device at the entry gate."
+	 "System calculates the number of Customer in the store if there is a capacity restriction."
+		2."System does not instruct the EntryGate to open when the store crosses its capacity limit." 	
+		"System waits for any customers to leave the store."
+		3."System receives alert from the ExitGate when a customer leave."
+		4. "System requests Customer to scan device again."
+mode switch: Normal
+use case ends in: SUCCESS
+
+
+use case: ExitStore
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The customer intends to exit the smart store."
+multiplicity: "Only one customer can exit through an exit gate 
+			   at a time."
+primary actor: HUMAN::Customer::1..*
+secondary actor: PHYSICAL_ENTITY::ExitGate::1..1
+main success scenario:
+	1. [ScanMobileDeviceOnExit] "Customer scans mobile device
+	   or credit card at the exit gate."
+	2. "System instructs the ExitGate to open."
+	"Customer passes through the ExitGate."
+	3. "System checks out the Customer."
+	4. "System closes the ExitGate after 10 seconds"
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a.{ENVIRONMENT_EXCEPTION::FireHazard}
+		  #Customer does not need to scan mobile device.#		  	  
+	 		use case continues at step: 2
+	exception for 1:  
+		1b. {ENVIRONMENT_EXCEPTION::CriminalAttack} #Customer does not need to scan mobile device.#
+			use case continues at step: 2
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::ExitFailure} #Exit gate failed 
+			to open. Customer cannot exit.#
+		use case continues at step: 1
+	alternative for 4:
+		"Customer cannot exit the store before the ExitGate is closed."
+		use case continues at step: 1
+
+
+use case: AddToCart
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "Customer intends to buy one or more items from the store."
+multiplicity: "One customer can add multiple items to the cart during a trip."
+primary actor: HUMAN::Customer::1..*
+main success scenario:
+	"Step 1-3 can be repeated according to the intent of the Customer."
+	"Customer picks up an item from the smart shelf."
+	1. [IdentifyItem] "System receives item information from the sensors for 
+	   identifying item."
+    2. [RecognizeCustomer] "System receives images from Camera to recognize 
+       customer."
+    3. "System notifies Customer after adding item to the virtual cart."
+    use case ends in: SUCCESS
+extensions:
+	alternative for 3:
+		"Customer puts back an item on the shelf." 
+		3a. [RemoveItem] "System removes item from customer's virtual cart."
+		use case ends in: SUCCESS 
+
+
+use case: ReturnItem
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "Customer intends to return an item to the store which he previously purchased"
+multiplicity: "One customer can return multiple items at once."
+primary actor: HUMAN:: Customer::1..*
+secondary actor: HUMAN::Staff::1..*, SOFTWARE::PaymentService::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice
+main success scenario:
+	"Customer hands item to be returned to Staff."
+	"Staff checks the item to be returned. If the item can be returned as per the store's policy, 
+	Staff initiates return process."
+	1. "Staff requests System to refund the item."
+	2. "System scans the item with MobileDevice."
+	"System validates the return."
+	3. "System sends a refund request to the PaymentService."
+	"Payment service refunds the Customer."
+	 use case ends in: SUCCESS
+
+
+use case: RemoveItem
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to remove item from a customer's virtual cart"
+multiplicity: "System can remove item from multiple customers at the same time."
+primary actor: N/A
+secondary actor:N/A
+facilitator actor: N/A
+main success scenario:
+	1. [IdentifyItem] "System receives item information from the sensors for identifying item."
+    2. [RecognizeCustomer] "System receives images from camera to recognize customer."
+	3. "System notifies Customer after removing item from the virtual cart."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {SOFTWARE_EXCEPTION::ImageUnmatched} #System cannot associate customer with the item he
+			put back to the shelf.#
+		use case  continues at step: 3
+
+
+use case: IdentifyItem
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to identify an item."
+multiplicity: "System can identify multiple items simultaneously."
+primary actor: N/A
+secondary actor: SENSOR::PressureSensor::1..*, SENSOR::WeightSensor::1..*, READER::TagReader::1..*
+facilitator actor: N/A
+main success scenario:
+	"Step 1- 3 can occur in any order or in parallel."
+	1. "System receives the item's tag number from the TagReader."
+	2. "System receives pressure of the item's position on the shelf from 
+		the PressureSensor sensor."
+	3. "System receives the weight of the item from the WeightSensor sensor."
+	"System verifies if the item has been picked up from the shelf
+		based on data from sensors."
+	"System identifies the specific item with the tag number."
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {HARDWARE_EXCEPTION::TagUnavailable} #Tag missing or damaged. The tag number system 
+		received does not match with any item's tag.#
+		use case  continues at step: 1
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::PressureSensorUndetected} #Pressure sensor is damaged. System
+		 does not receive pressure value from pressure sensor.#
+		use case  continues at step: 2
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::WeightSensorUnavailable} #Weight sensor is damaged. System does
+		 not receive weight value from weight sensor.#
+		use case  continues at step: 3
+
+
+use case: RecognizeCustomer
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to recognize customer with the images received from camera."
+multiplicity: "Multiple camera take images for user recognition simultaneously."
+primary actor: N/A
+secondary actor: SENSOR::Camera::*..*
+facilitator actor: N/A
+main success scenario:
+	1. "System receives images from Camera."
+	"System matches new images received from Camera with images taken on entry."
+	2. "System identifies the Customer."
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {SOFTWARE_EXCEPTION::ImageUnmatched} #Images from the entry gate and inside the store do
+		 not match. System cannot recognize the customer.#
+		use case  continues at step: 2
+
+
+use case: RecognizeStaff
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to recognize staff with the images received from camera."
+multiplicity: "Multiple camera take images for user recognition simultaneously."
+primary actor: N/A
+secondary actor: SENSOR::Camera::*..*
+facilitator actor: N/A
+main success scenario:
+	1. "System receives images from Camera."
+	"System matches new images received from Camera with images taken on entry."
+	2. "System identifies the staff."
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a. {SOFTWARE_EXCEPTION::ImageUnmatched} #Images from the entry gate and inside the store do
+		 not match. System cannot recognize the staff.#
+		use case  continues at step: 2
+
+use case: ScanMobileDeviceOnExit
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to read mobile device at the exit gate."
+multiplicity: "Only one customer can scan the mobile device at one exit gate at a time."
+primary actor: None
+secondary actor: SOFTWARE::PaymentService::1..*, HUMAN::Customer::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..1, PHYSICAL_ENTITY::CreditCard::1..1
+main success scenario:
+	1. "System reads MobileDevice at the exit gate."
+	2. "System asks Customer to confirm completion of shopping."
+	3. "System receives confirmation from the Customer."
+	4. [PayBill]  "System connects to a PaymentService to process the payment."
+	5. "System checks out the Customer from the store."
+ 	use case ends in: SUCCESS
+ extensions:
+ 	alternative for 1: 
+ 		1a. "System reads CreditCard at the exit gate."
+ 		1a.1. "System receives balance deduction confirmation from the PaymentService."
+		1a.2. "System checks out the Customer from the store."
+ 		use case ends in: DEGRADED 
+	exception for 2:
+		2a. {NETWORK_EXCEPTION::CustomerUnreachable} #System cannot 
+			communicate with the customer due to network connectivity issue.#
+		use case continues at step: 3
+	
+
+use case: PayBill
+scope: SmartStoreSystem
+level: SUB_SUB_FUNCTION
+intention: "System intends to connect to a payment service to receive bill from customer at the exit gate."
+multiplicity: "Only one PaymentService can be connected at exit gate at a time."
+primary actor: None
+secondary actor: SOFTWARE::PaymentService::1..1
+main success scenario:
+	1. "System connects to the PaymentService."
+	2. "System requests the PaymentService to deduct bill."
+		"PaymentService debits the bill from customers' account."
+	3. "System receives payment processed confirmation from the PaymentService."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 3:
+		3a. "System receives insufficient balance alert from the PaymentService."
+		3a.1. "System asks the Customer to choose a different payment service."
+		nested extensions begin:
+			alternative for 3a.1:
+				3a.1a. "Customer chooses a different PaymentService."
+				use case continues at step: 1
+			alternative for 3a.1:
+			"Step 3a.1b. can be repeated according to the intention of the Customer."
+				3a.1b. [RemoveItem] "Customer does not choose a different
+				       payment service. Customer puts back an item on the shelf."	
+				use case continues at step: 1
+		nested extensions ends
+	exception for 3:
+		3b. "System fails to connect to the PaymentService."
+		3b.1. {SOFTWARE_EXCEPTION::PaymentServiceDown} #System cannot process payment.#
+		use case ends in: FAILURE
+
+
+use case: ScanMobileDeviceOnEntry
+scope: SmartStoreSystem
+level: SUB_FUNCTION 
+intention: "Customer intends to scan mobile device at the entry gate"
+multiplicity: "Only one customer can scan the mobile device at one entry gate at a time."
+primary actor: N/A
+secondary actor: PHYSICAL_ENTITY::EntryGate::1..1, PHYSICAL_ENTITY::CreditCard::1..1
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..1
+main success scenario:
+	1. "System authenticates the Customer."
+    2. "System reads MobileDevice at the entry gate."
+    3. "System receives information from the EntryGate."
+    4. "System checks in the Customer to the store."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 1:
+		"Customer is not logged in."
+		1a."System requests the Customer to login."
+		use case continues at step: 1
+	alternative for 2:	
+		 "Customer does not scan the MobileDevice correctly."
+		2a. "System requests the Customer to scan again."
+		use case continues at step: 2
+	alternative for 2:	
+	 2b. "System reads CreditCard at the entry gate."
+	 use case continues at step: 3
+
+/* Staffs' use case models */
+
+use case: MaintainStore
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The staff intends to perform regular maintenance."
+multiplicity: "Multiple staff can take part in maintenance activity at the same time."
+primary actor: SOFTWARE::Staff::1..*
+main success scenario:
+	1. [CheckIn] "The staff checks in to the store."
+	"Step 3 can be repeated according to the intent of the Staff."
+	2. [RestockShelves] "The staff re-stock shelves."
+	3. [CheckOut] "The staff check-out from the store."
+	use case ends in: SUCCESS
+extensions:
+	exception for (1-3):
+		(1-3)a. {ENVIRONMENT_EXCEPTION::FireHazard} #Fire hazard in the 
+			store.#
+		use case ends in: FAILURE
+	exception for (1-3):
+		(1-3)b. {ENVIRONMENT_EXCEPTION::CriminalAttack} #Store is under attack.
+			 	No new customer can enter.#
+		use case ends in: FAILURE
+		
+
+use case: EnrollStaff
+scope: SmartStoreSystem
+level: USER_GOAL
+intention: "The staff intends to enroll to the system."
+multiplicity: "Many staff can enroll to the system at a time."
+primary actor: HUMAN::Admin::1..*
+secondary actor: HUMAN:: Staff::1..*
+facilitator actor: PHYSICAL_ENTITY::MobileDevice::1..1
+main success scenario:
+	1."Admin add staff to the System." 
+	2."Admin takes staff's ID and initial password generated by System."
+	"Staff installs the system in MobileDevice. Staff receives ID and password from Admin."
+	3. "System asks the Staff to update password."
+	use case ends in: SUCCESS
+
+
+use Case: CheckIn
+scope: SmartStoreSystem
+level : SUB_FUNCTION
+intention: "The staff intends to enter the smart store."
+multiplicity: "Only one staff can enter through an entry gate at once."
+primary actor: HUMAN::Staff::1..*
+secondary actor: SENSOR:: Camera::*..*, PHYSICAL_ENTITY:: EntryGate::1..1
+main success scenario:
+	1. [ScanMobileDeviceOnEntry] "Staff scans the mobile device or credit card at the entry gate."
+	2. "System instructs the EntryGate to open."
+    3. "System instructs Camera to take images."
+    4. "System receives images from Camera."
+    5. "System associates image with the Staff."
+    6. "System records check-in time of the Staff to the store."
+	7. "System instructs the EntryGate to close after 10 seconds."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::EntryFailure} #Entry gate does not open.# 
+		use case  continues at step: 1	
+	alternative for 3:
+		"Staff does not enter through the EntryGate."
+		3a. "Camera sends alert to the System."
+		use case ends in: ABANDONED
+	exception for 4:
+		4a. {HARDWARE_EXCEPTION::CameraFailure} "System does not receive usable images 
+			from the camera."
+		use case continues at step: 4
+	alternative for 7:
+		"Staff did not enter before the EntryGate closes."
+		use case continues at step: 1
+ 
+ 
+use case: CheckOut
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The Staff intends to exit the smart store."
+multiplicity: "Only one staff can exit through an exit gate at once."
+primary Actor: HUMAN:: Staff::1..*
+secondary Actor: PHYSICAL_ENTITY:: ExitGate::1..1
+Facilitator Actor: PHYSICAL_ENTITY::MobileDevice::1..1
+Main Success Scenario:
+	"Staff scans the MobileDevice at ExitGate."
+	1. "System reads staff's MobileDevice."
+	2. "System instructs the ExitGate to open."
+	"Staff passes through the ExitGate."
+	3. "System checks out the Staff."
+	4. "System closes the ExitGate after 10 seconds"
+	use case ends in: SUCCESS
+extensions:
+	exception for 1:
+		1a.{ENVIRONMENT_EXCEPTION::FireHazard}#Staff does not need to scan mobile device.#
+	 	use case continues at step: 2
+	exception for 1:  
+		1b. {ENVIRONMENT_EXCEPTION::CriminalAttack} #Staff does not need to scan mobile device.#
+		use case continues at step: 2
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::ExitFailure} #ExitGate failed 
+			to open. Staff cannot exit.#
+		use case continues at step: 1
+	alternative for 4:
+		"Staff did not exit the store before the ExitGate was closed."
+		use case continues at step: 1
+
+ 
+use case: RestockShelves
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "Staff intends to re-stock smart shelves with different items." 
+multiplicity: "One staff can re-stock multiple shelves with multiple items." 
+primary actor: HUMAN:: Staff::1..*
+main success scenario:
+	
+	"Step 1-2 can be repeated according to the intent of the Staff."
+	"Staff puts an item to the shelf."
+	1. [IdentifyItem] "System receives item information from the sensors for 
+	   identifying item."
+    2. [RecognizeStaff] "System receives images from camera to recognize 
+       customer."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {SOFTWARE_EXCEPTION::ImageUnmatched} #System cannot associate 
+		    Staff with the item.#
+		use case  continues at step: 2
+
+/* Exception Handlers*/
+
+handler use case: HandleFireHazard
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The system locks all entry gates and unlocks all exit gates for the 
+			customers to ensure safety from fire hazard."
+multiplicity: "System locks multiple entry gates and unlocks multiple exit gates
+				at once."
+primary actor: N/A
+secondary actor: SOFTWARE::FireDetectionSystem::1..1, HUMAN::Staff::1..*
+facilitator actor: N/A
+contexts and exceptions: Shopping {ENVIRONMENT_EXCEPTION::FireHazard}, 
+						 MaintainStore{ENVIRONMENT_EXCEPTION::FireHazard},
+						 ExitStore {ENVIRONMENT_EXCEPTION::FireHazard},
+						 CheckOut{ENVIRONMENT_EXCEPTION::FireHazard}
+main success scenario:
+	mode switch: FireEmergency
+	"The FireDetectionSystem detects fire in the store."
+	1. "System receives an alert from the FireDetectionSystem."
+	"Step 2 will be repeated for all EntryGates in the store."
+	2. [RestrictEntry] "System locks EntryGate."
+	"Step 3 will be repeated for all ExitGates in the store."
+	3. "System unlocks ExitGate."
+	"Step 4 will be repeated for all EmergencyExits."
+	4. "System opens EmergencyExit."
+	"Step 5 will be repeated for all Customers and Staff in the store."
+	5. "System sends alert to the Customer and Staff inside the store to leave store."
+	"The fire hazard situation is being resolved."
+	6. "System receives a resume message from the FireDetectionSystem."
+	"Step 7 will be repeated for all EntryGates in the store."
+	7. "System unlocks EntryGate."
+	"Step 8 will be repeated for all ExitGates in the store."
+	8. "System locks ExitGate."
+	"Step 9 will be repeated for all EmergencyExits."
+	9. "System closes the emergency exit."
+	mode switch: Normal 
+	use case ends in: SUCCESS
+	
+	
+handler use case: AlertOnAttack
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "The system locks the entry gate, notify the police, and opens emergency exit for the 
+			customers to ensure safety from attacker."
+multiplicity: "System locks multiple entry gates at once."
+primary actor: N/A
+secondary actor: HUMAN::Customer::1..*, HUMAN::Staff::1..*, PHYSICAL_ENTITY::EmergencyExit::2..*, 
+				PHYSICAL_ENTITY::ExitGate::2..*, PHYSICAL_ENTITY::EntryGate::2..*,
+				PHYSICAL_ENTITY::PoliceStation
+facilitator actor: PHYSICAL_ENTITY::AttackAlertSwitch
+contexts and exceptions: Shopping {ENVIRONMENT_EXCEPTION::CriminalAttack}, 
+                         MaintainStore{ENVIRONMENT_EXCEPTION::CriminalAttack},
+                         ExitStore{ENVIRONMENT_EXCEPTION::CriminalAttack},
+                         CheckOut{ENVIRONMENT_EXCEPTION::CriminalAttack}
+main success scenario:
+	mode switch: ExternalAttackEmergency
+	"A Staff or Customer hit the AttackAlertSwitch."
+	1. "System receives an attack alert from the AttackAlertSwitch."
+	2. "System notifies the PoliceStation."
+	"Step 3 will be repeated for all EntryGates."
+	3. [RestrictEntry]"System locks every EntryGate."
+	"Step 4 will be repeated for all ExitGates."
+	4. "System unlocks every ExitGate."
+	"Step 5 will be repeated for all EmergencyExits."
+	5. "System opens EmergencyExit."
+	"Step 6 will be repeated for all Customers and Staff in the store."
+	6. "System sends alert to the Customer and Staff inside the store."
+	7. "System receives a resume message from the PoliceStation."
+	"Step 8 will be repeated for all EntryGates."
+	8. "System unlocks EntryGate."
+	"Step 9 will be repeated for all EmergencyExits."
+	9. "System closes the EmergencyExit."
+	"Step 10 will be repeated for all ExitGate."
+	10. "System closes the ExitGate"
+	mode switch: Normal
+	use case ends in: SUCCESS	
+
+
+handler use case: ServiceGate
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: ""
+primary actor: N/A
+secondary actor: HUMAN::ServicePerson::1..*
+contexts and exceptions: ExitStore {HARDWARE_EXCEPTION::ExitFailure}, 
+	EnterStore{HARDWARE_EXCEPTION::EntryFailure}, CheckIn{HARDWARE_EXCEPTION::EntryFailure}, 
+	CheckOut{HARDWARE_EXCEPTION::ExitFailure}
+main success scenario:
+	"Step 1 and 2 can execute in parallel."
+	1. "System sends a message to the ServicePerson with location."
+	2. "System requests Customer to use another entry gate."
+	3. "ServicePerson checks the issue with the gate."
+	4. "ServicePerson repairs the gate."
+	5. "System receives a resolved message from the ServicePerson."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 2:
+		2a. "System requests Customer to use another exit gate."
+		use case continues at step: 3	
+	alternative for 4:
+		"ServicePerson is unable to repair the device."
+		4a. "ServicePerson replaces the gate."
+		use case continues at step: 5
+
+
+handler use case: HoldPayment
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to update the payment status of a Customer."
+primary actor: None
+contexts and exceptions:
+	PayBill {SOFTWARE_EXCEPTION::PaymentServiceDown}
+main success scenario:
+	 "System has detected the PaymentService is down."  
+	1. "System puts payment status on hold."
+	2. [PayBill] "System asks customer to scan
+	 mobile device or credit card at the exit gate."
+	3. "System receives payment confirmation from the PaymentService."
+	use case ends in: SUCCESS
+
+
+handler use case: RequestUser
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends too request user to wait for taking more images."
+primary actor: None
+secondary actor: SENSOR::Camera::1..*
+contexts and exceptions: EnterStore{HARDWARE_EXCEPTION::CameraFailure}, CheckIn{HARDWARE_EXCEPTION::CameraFailure}
+main success scenario:
+	1. "System requests the user to wait for Camera to take images."
+	2. "System asks Camera to take images."
+	3. "System receives image from Camera."
+	4. "System matches  user accounts."
+	5. "System sends okay message to the Customer."
+	use case ends in: SUCCESS
+
+
+handler use case: RequestCamera
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to request Camera to send more photos."
+primary actor: None
+secondary actor: SENSOR:: Camera::1..*
+contexts and exceptions: RecognizeCustomer{SOFTWARE_EXCEPTION::ImageUnmatched},RecognizeStaff{SOFTWARE_EXCEPTION::ImageUnmatched}, 
+	RemoveItem{SOFTWARE_EXCEPTION::ImageUnmatched}, RestockShelves{SOFTWARE_EXCEPTION::ImageUnmatched}
+main success scenario:
+	1. "System asks Camera to take more images."
+	"Camera takes more photo of the customer"
+	2. "System receives image from Camera"
+	3. "System matches Customer accounts"
+	use case ends in: SUCCESS
+
+
+handler use case: GetResponse
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to wait for Customer's response."
+primary actor: None
+contexts and exceptions: ScanMobileDeviceOnExit{NETWORK_EXCEPTION::CustomerUnreachable}
+main success scenario:
+	1. "System asks for Customer's response every 5 seconds."
+	2. "Customer connects to the Internet."
+	3. "Customer receives system's message."
+	4. "Customer confirms completion of shopping"
+	use case ends in: SUCCESS
+	
+
+handler use case: ServiceSensor
+scope: SmartStoreSystem
+level: SUB_FUNCTION
+intention: "System intends to repair any damaged sensors."
+primary actor: N/A
+secondary actor: HUMAN::ServicePerson::1..*, HUMAN:: Staff::1..*
+contexts and exceptions:
+	IdentifyItem{HARDWARE_EXCEPTION::TagUnavailable}, 
+	IdentifyItem{HARDWARE_EXCEPTION::PressureSensorUndetected},
+	IdentifyItem{HARDWARE_EXCEPTION::WeightSensorUnavailable}
+main success scenario:
+	"Step 1 and 2 can execute in parallel."
+	1. "System sends a message to the ServicePerson and with hardware location."
+	2. "System sends a message to Staff hardware location."
+	"Steps 3-5 and Steps 6-8 can be execute in parallel."
+		"Staff scans the item."
+		"Staff enter Customer information to the System."
+	3. "System update Customer's cart."
+	 "ServicePerson repairs the hardware."
+	4. "System receives a resolved message from the ServicePerson."
+	use case ends in: SUCCESS
+extensions:	
+	alternative for 4:
+		"ServicePerson is unable to repair the device."
+		"ServicePerson replaces the hardware."
+		use case continues at step: 4
+

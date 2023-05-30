@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iotdomainmodel:IoTDomainModel xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotdomainmodel="http://www.ucm4iot.org/mde/iot/iotdomainmodel" xmlns:xmi="http://www.omg.org/XMI">
+	<devices xsi:type="iotdomainmodel:Sensor" name="Camera"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="PressureSensor"/>
+	<devices xsi:type="iotdomainmodel:Sensor" name="WeightSensor"/>
+	<physicalEntities name="MobileDevice"/>
+	<physicalEntities name="EntryGate"/>
+	<physicalEntities name="ExitGate"/>
+	<physicalEntities name="CreditCard"/>
+	<physicalEntities name="EmergencyExit"/>
+	<physicalEntities name="PoliceStation"/>
+	<physicalEntities name="AttackAlertSwitch"/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="Customer" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="Staff" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="Admin" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:HumanUser" name="ServicePerson" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="PaymentService" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="Staff" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:VirtualEntity" name="FireDetectionSystem" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="RegisterCustomer" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="CustomerLogin" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="Shopping" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="StaffLogin" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="MaintainStore" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="ReturnItem" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="ScanMobileDeviceOnEntry" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="ScanMobileDeviceOnExit" interactsWith=""/>
+	<users xsi:type="iotdomainmodel:Service" name="PayBill" interactsWith=""/>
+</iotdomainmodel:IoTDomainModel>

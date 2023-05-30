@@ -1,0 +1,256 @@
+
+!Standard Mode: off
+
+!List Modes: 
+	NORMAL::Normal::default,
+	RESTRICTED::NoConnection
+
+!List Exceptions: 
+	{HARDWARE_EXCEPTION::LEDFailure},
+	{HARDWARE_EXCEPTION::WiFiLEDFailure},
+	{HARDWARE_EXCEPTION::ErrorDisplayFailure},
+	{NETWORK_EXCEPTION::WiFiUnreachable}
+	
+/* Summary Level Use Cases */
+
+use case: UseSmartLights
+scope:	  SmartLightsSystem
+level:	  SUMMARY
+intention:	  "The user intends to use the smart lights system."
+multiplicity: "Many users can use the smart lights system at one time."
+primary actor:   HUMAN::User::1..*
+secondary actor: ACTUATOR::LED::0..*, ACTUATOR::WiFiLED::0..*, ACTUATOR::ErrorDisplay::0..*
+main success scenario:
+	"Steps 1-3 may be repeated for every each device in the System."
+	1. [TurnOnSmartLightDevice]     "The User turns on an LED, WiFiLED, and ErrorDisplay."
+	2. [ViewSmartLightDeviceStatus] "The User observes the status of an LED, WiFiLED, and ErrorDisplay."
+	3. [DebugHardware]              "The User debugs the LED, WiFiLED, and ErrorDisplay."
+	4. [ViewLogs]                   "The User views the logs."
+	"Step 4 may be repeated for each device in the System."
+	5. [TurnOffSmartLightDevice]    "The User turns off an LED, WiFiLED, and ErrorDisplay."
+	use case ends in: SUCCESS
+
+
+use case: OperateSmartLights
+scope:	  SmartLightsSystem
+level:	  SUMMARY
+intention:	  "The LDR intends to control a smart lights device."
+multiplicity: "One LDR can control one smart light device."
+primary actor:   SENSOR::LDR::1..1
+main success scenario:
+	1. [ManageLED]    "The LDR manages the LED."
+	use case ends in: SUCCESS
+
+
+/* Use Cases */
+
+use case: TurnOnSmartLightDevice
+scope:	  SmartLightsSystem
+level:	  SUB_FUNCTION
+intention:	  "The user intends to supply power to the LED, WiFiLED and ErrorDisplay."
+multiplicity: "One user may turn on a LED, WiFiLED and ErrorDisplay at a time."
+primary actor:   HUMAN::User::1..1
+secondary actor: ACTUATOR::LED::1..1, ACTUATOR::WiFiLED::1..1, ACTUATOR::ErrorDisplay::1..1
+main success scenario:
+	"The User supplies power to the LED, WiFiLED and ErrorDisplay."
+	1.^ "The System initializes connection to the LED, WiFiLED and ErrorDisplay."
+	"Steps 2-4 repeat 3 times"
+	2.  "The System instructs the LED to blink."
+	3.  "The System instructs the WiFiLED to blink."
+	4.  "The System instructs the ErrorDisplay to blink."
+	use case ends in: SUCCESS
+extensions:
+	exception for 2:
+		2a. {HARDWARE_EXCEPTION::LEDFailure} "The LED does not blink."
+		use case continues at step: 2
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::WiFiLEDFailure} "The WiFiLED does not blink."
+		use case continues at step: 3
+	exception for 4:
+		4a. {HARDWARE_EXCEPTION::ErrorDisplayFailure} "The ErrorDisplay does not blink."
+		use case continues at step: 4
+
+
+use case: TurnOffSmartLightDevice
+scope:	  SmartLightsSystem
+level:	  SUB_FUNCTION
+intention:	  "The user intends to stop supplying power to the LED, WiFiLED and ErrorDisplay."
+multiplicity: "One user may turn off the LED, WiFiLED and ErrorDisplay at a time."
+primary actor:   HUMAN::User::1..1
+secondary actor: ACTUATOR::LED::1..1, ACTUATOR::WiFiLED::1..1, ACTUATOR::ErrorDisplay::1..1
+main success scenario:
+	"The User stops supplying power to the LED, WiFiLED and ErrorDisplay."
+	use case ends in: SUCCESS
+
+
+use case: DebugHardware
+scope:	  SmartLightsSystem
+level:	  SUB_FUNCTION
+intention:	  "The user intends to stop supplying power to the LED, WiFiLED and ErrorDisplay."
+multiplicity: "One user may turn off the LED, WiFiLED and ErrorDisplay at a time."
+primary actor:   HUMAN::User::1..1
+secondary actor: SENSOR::DebugButton::1..1, ACTUATOR::LED::1..1, ACTUATOR::WiFiLED::1..1, ACTUATOR::ErrorDisplay::1..1
+main success scenario:
+	"The DebugButton monitors the User for input."
+	1. "The DebugButton sends input data to the System."
+	2.^ "System ascertains that the DebugButton has been pushed."
+	"Steps 3-5 repeat 3 times"
+	3.  "The System instructs the LED to blink."
+	4.  "The System instructs the WiFiLED to blink."
+	5.  "The System instructs the ErrorDisplay to blink."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 2:
+		2a.^ "System ascertains that the DebugButton has not been pushed."
+		use case ends in: SUCCESS
+	exception for 3:
+		3a. {HARDWARE_EXCEPTION::LEDFailure} "The LED does not blink."
+		use case continues at step: 2
+	exception for 4:
+		4a. {HARDWARE_EXCEPTION::WiFiLEDFailure} "The WiFiLED does not blink."
+		use case continues at step: 3
+	exception for 5:
+		5a. {HARDWARE_EXCEPTION::ErrorDisplayFailure} "The ErrorDisplay does not blink."
+		use case continues at step: 4
+
+
+use case: ViewSmartLightDeviceStatus
+scope:    SmartLightsSystem
+level:    USER_GOAL
+intention:	  "The user intends to view the current status of the LED and the ErrorDisplay."
+multiplicity: "Many users can view the status of the LED and the ErrorDisplay at a time."
+primary actor:   HUMAN::User::1..*
+secondary actor: ACTUATOR::LED::1..1, ACTUATOR::WiFiLED::1..1, ACTUATOR::ErrorDisplay::1..1
+main success scenario:
+	1. "The System communicates the external light intensity status of the device to the User through the LED."
+	2. "The System communicates the internal network status of the device to the User through the WiFiLED."
+	3. "The System notifies the User through the ErrorDisplay that everything is operational."
+	use case ends in: SUCCESS
+extensions:
+	exception for 3:
+		3a. "The System notifies the User through the ErrorDisplay that it cannot connect to WiFi."
+		3a.1. {NETWORK_EXCEPTION::WiFiUnreachable} "WiFi unreachable."
+		use case continues at step: 3
+
+
+use case: ViewLogs
+scope:    SmartLightsSystem
+level:    USER_GOAL
+intention:	  "The user intends to view logs from the LDR on the Hub."
+multiplicity: "Many users can view the logs from the Hub."
+primary actor:   HUMAN::User::1..*
+main success scenario:
+	1. "The User requests the logs from the System."
+	2. "The System returns the copy of the logs to the User."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 2:
+		2a.^  "The System cannot find any logs."
+		2a.1. "The System notifies the User that there are zero logs in the system."
+		use case ends in: FAILURE
+
+
+use case: ManageLED
+scope:	  SmartLightsSystem
+level:	  USER_GOAL
+intention:	  "The LDR intends to change the LED to On or Off depending on the current light intensity in the environment."
+multiplicity: "One LDR may change the status of the LED to On or Off."
+primary actor:   SENSOR::LDR::1..1
+secondary actor: ACTUATOR::LED::1..1, PHYSICAL_ENTITY::PhysicalSurrounding
+main success scenario:
+	"LDR monitors the PhysicalSurrounding."
+	1.  "LDR sends external light intensity to System."
+	2.^ "System calculates that light intensity threshold has been reached."
+	3.  "System turns off LED."
+	"LED acts on PhysicalSurrounding by not providing light."
+	4.  [RecordData] "System records external light intensity to the system."
+	use case ends in: SUCCESS
+extensions:
+	alternative for 2:
+		4a.^  "System calculates that light intensity threshold has not been reached."
+		4a.1. "System turns on LED."
+		"LED acts on PhysicalSurrounding by providing light."
+		use case continues at step: 4
+
+
+use case: RecordData
+scope:	  SmartLightsSystem
+level:	  SUB_FUNCTION
+intention:	  "The LDR intends to send data regarding the status of the environment."
+multiplicity: "Many LDR sensors may send data at a time."
+primary actor:   None
+secondary actor: ACTUATOR::WiFiLED::1..1
+main success scenario:
+	1.^ "System creates a log of the light intensity."
+	2.  "System turns on WiFiLED."
+	3.^ "System connects to WiFi."
+	4.^ "System records log of the light intensity."
+	5.  "System turns off WiFiLED"
+	use case ends in: SUCCESS
+extensions:
+	exception for 4:
+		4a.^  timeout:30s "WiFi fails to send confirmation."
+		4a.1. {NETWORK_EXCEPTION::WiFiUnreachable} "WiFi unreachable."
+		use case ends in: FAILURE
+
+/* Handler Use Cases */
+
+handler use case: DisplayErrorCode
+scope: SmartLightsSystem
+level: SUB_FUNCTION
+intention:    "The ErrorDisplay intends to display error codes for user to identify issues and to fix them accordingly."
+multiplicity: "One ErrorDisplay may display error codes at a time."
+primary actor:   ACTUATOR::ErrorDisplay::1..1
+contexts and exceptions: 
+	RecordData {NETWORK_EXCEPTION::WiFiUnreachable}
+main success scenario:
+	mode switch: NoConnection
+	1.^ "System determines that it was not able to connect to WiFi."
+	2.  "System sends WiFiUnreachable code to ErrorDisplay."
+	"Step 3 repeats every 1 minute."
+	3.^ "System attempts to reconnect to WiFi."
+	4.^ "System successfully reconnects to WiFi."
+	5.  "System sends message to ErrorDisplay to stop showing error code."
+	mode switch: Normal
+	use case ends in: SUCCESS
+
+
+handler use case: ReconnectDevice
+scope: SmartLightsSystem
+level: SUB_FUNCTION
+intention:    "The user intends to fix the connection issues in the System."
+multiplicity: "One User may reconnect the System at a time."
+primary actor:   HUMAN::User::1..1
+secondary actor: ACTUATOR::ErrorDisplay::1..1
+contexts and exceptions: 
+	ViewSmartLightDeviceStatus {NETWORK_EXCEPTION::WiFiUnreachable}
+main success scenario:
+	mode switch: NoConnection
+	1. "The System notifies the User through the ErrorDisplay that it cannot connect to WiFi."
+	"The User resolves connectivity issues in the environment."
+	"Step 2 repeats every 1 minute."
+	2.^ "System attempts to reconnect to WiFi."
+	3.^ "The System successfully connects to WiFi."
+	mode switch: Normal
+	use case ends in: SUCCESS
+
+
+handler use case: RepairDevice
+scope: SmartLightsSystem
+level: SUB_FUNCTION
+intention:    "The User intends to repair the LED, WiFiLED or ErrorDisplay."
+multiplicity: "One User may repair the LED, WiFiLED or ErrorDisplay at a time."
+primary actor: HUMAN::User
+secondary actor: ACTUATOR::LED::1..1, ACTUATOR::WiFiLED::1..1, ACTUATOR::ErrorDisplay::1..1
+contexts and exceptions: 
+	TurnOnSmartLightDevice {HARDWARE_EXCEPTION::LEDFailure},
+	TurnOnSmartLightDevice {HARDWARE_EXCEPTION::WiFiLEDFailure},
+	TurnOnSmartLightDevice {HARDWARE_EXCEPTION::ErrorDisplayFailure},
+	DebugHardware {HARDWARE_EXCEPTION::LEDFailure},
+	DebugHardware {HARDWARE_EXCEPTION::WiFiLEDFailure},
+	DebugHardware {HARDWARE_EXCEPTION::ErrorDisplayFailure}
+main success scenario:
+	1. "The System notifies the User by blinking the LED, WiFiLED and the ErrorDisplay."
+	"The User determines the broken hardware component."
+	"The User replaces the hardware component."
+	use case ends in: SUCCESS

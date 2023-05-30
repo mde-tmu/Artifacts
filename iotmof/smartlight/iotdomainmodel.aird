@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:iotdomainmodel="http://www.ucm4iot.org/mde/iot/iotdomainmodel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_geMrgMjDEe2lt4R-IEQ2mg" selectedViews="_g8yE8MjDEe2lt4R-IEQ2mg" version="15.0.0.202201261500">
+    <semanticResources>mde.iot.smartlights.v5.change_request_1.iotdomainmodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_g8yE8MjDEe2lt4R-IEQ2mg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_iTn8EMjDEe2lt4R-IEQ2mg" name="new IoT Domain Model" repPath="#_iTkRsMjDEe2lt4R-IEQ2mg" changeId="6bb27a78-76d3-4ab7-ad46-e0d455844dbb">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']"/>
+        <target xmi:type="iotdomainmodel:IoTDomainModel" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_iTkRsMjDEe2lt4R-IEQ2mg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iUEoAMjDEe2lt4R-IEQ2mg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_iUEoAcjDEe2lt4R-IEQ2mg" type="Sirius" element="_iTkRsMjDEe2lt4R-IEQ2mg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_iVVMQMjDEe2lt4R-IEQ2mg" type="2001" element="_iUe3sMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVoHMMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVoHMcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWHPYMjDEe2lt4R-IEQ2mg" type="3003" element="_iUgs4MjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWHPYcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWHPYsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVVMQcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVVMQsjDEe2lt4R-IEQ2mg" x="936" y="390" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVp8YMjDEe2lt4R-IEQ2mg" type="2001" element="_iUiiEMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVqjcMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVqjccjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWIdgMjDEe2lt4R-IEQ2mg" type="3003" element="_iUjwMMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWIdgcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWIdgsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVp8YcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVp8YsjDEe2lt4R-IEQ2mg" x="681" y="525" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVrKgMjDEe2lt4R-IEQ2mg" type="2001" element="_iUk-UMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVrxkMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVrxkcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWIdg8jDEe2lt4R-IEQ2mg" type="3003" element="_iUllYMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWIdhMjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWIdhcjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVrKgcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVrKgsjDEe2lt4R-IEQ2mg" x="1206" y="525" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVsYoMjDEe2lt4R-IEQ2mg" type="2001" element="_iUmMccjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVs_sMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVtmwMjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWJEkMjDEe2lt4R-IEQ2mg" type="3003" element="_iUmMcsjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWJEkcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWJEksjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVsYocjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVsYosjDEe2lt4R-IEQ2mg" x="1371" y="525" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVtmwcjDEe2lt4R-IEQ2mg" type="2001" element="_iUnakcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVuN0MjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVuN0cjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWJroMjDEe2lt4R-IEQ2mg" type="3003" element="_iUoBoMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWJrocjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWJrosjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVtmwsjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVtmw8jDEe2lt4R-IEQ2mg" x="1026" y="525" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVvb8MjDEe2lt4R-IEQ2mg" type="2001" element="_iUp20MjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVx4MMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVx4McjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWKSsMjDEe2lt4R-IEQ2mg" type="3003" element="_iUqd4MjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWKSscjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWKSssjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVwDAMjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVwDAcjDEe2lt4R-IEQ2mg" x="855" y="525" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iVyfQMjDEe2lt4R-IEQ2mg" type="2001" element="_iUrE8MjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iVzGUMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iVzGUcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWK5wMjDEe2lt4R-IEQ2mg" type="3003" element="_iUrsAMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWK5wcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWK5wsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iVyfQcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVyfQsjDEe2lt4R-IEQ2mg" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV0UcMjDEe2lt4R-IEQ2mg" type="2001" element="_iUsTEcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV2JoMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV2JocjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWLg0MjDEe2lt4R-IEQ2mg" type="3003" element="_iUs6IMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWLg0cjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWLg0sjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV07gMjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV07gcjDEe2lt4R-IEQ2mg" y="90" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV2wsMjDEe2lt4R-IEQ2mg" type="2001" element="_iUthMMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV3-0MjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV3-0cjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWMH4MjDEe2lt4R-IEQ2mg" type="3003" element="_iUthMcjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWMH4cjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWMH4sjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV2wscjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV2wssjDEe2lt4R-IEQ2mg" y="179" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV4l4MjDEe2lt4R-IEQ2mg" type="2001" element="_iUuIQcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV6bEMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV6bEcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWMu8MjDEe2lt4R-IEQ2mg" type="3003" element="_iUuIQsjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWMu8cjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWMu8sjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV4l4cjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV4l4sjDEe2lt4R-IEQ2mg" y="270" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV8QQMjDEe2lt4R-IEQ2mg" type="2001" element="_iUuvUcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV8QQ8jDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV8QRMjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWNWAMjDEe2lt4R-IEQ2mg" type="3003" element="_iUvWYMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWNWAcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWNWAsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV8QQcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV8QQsjDEe2lt4R-IEQ2mg" y="360" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV83UMjDEe2lt4R-IEQ2mg" type="2001" element="_iUv9cMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV9eYMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV9eYcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWOkIMjDEe2lt4R-IEQ2mg" type="3003" element="_iUwkgMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWOkIcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWOkIsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV83UcjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV83UsjDEe2lt4R-IEQ2mg" x="438" y="390" width="196" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV-FcMjDEe2lt4R-IEQ2mg" type="2001" element="_iUyZsMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV-sgMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV-sgcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWPLMMjDEe2lt4R-IEQ2mg" type="3003" element="_iU0O4MjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWPLMcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWPLMsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV-FccjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV-FcsjDEe2lt4R-IEQ2mg" x="681" y="255" width="160" height="61"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iV-sgsjDEe2lt4R-IEQ2mg" type="2001" element="_iU018cjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iV_6oMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iV_6ocjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWPyQMjDEe2lt4R-IEQ2mg" type="3003" element="_iU1dAMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWPyQcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWPyQsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iV-sg8jDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iV-shMjDEe2lt4R-IEQ2mg" x="1026" y="255" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iWAhsMjDEe2lt4R-IEQ2mg" type="2001" element="_iU2EEcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWBv0MjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iWBv0cjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWQZUMjDEe2lt4R-IEQ2mg" type="3003" element="_iU2EEsjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWQZUcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWQZUsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iWAhscjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWAhssjDEe2lt4R-IEQ2mg" x="1206" y="255" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iWC98MjDEe2lt4R-IEQ2mg" type="2001" element="_iU2rIcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWFaMMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iWFaMcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWRAYMjDEe2lt4R-IEQ2mg" type="3003" element="_iU35QMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWRAYcjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWRAYsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iWC98cjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWC98sjDEe2lt4R-IEQ2mg" x="435" y="255" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_iWFaMsjDEe2lt4R-IEQ2mg" type="2001" element="_iU4gUcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWGoUMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_iWGoUcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWRncMjDEe2lt4R-IEQ2mg" type="3003" element="_iU5HYMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_iWRnccjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWRncsjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_iWFaM8jDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWFaNMjDEe2lt4R-IEQ2mg" x="855" y="255" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__xNbcMjDEe2lt4R-IEQ2mg" type="2001" element="__wkiQMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="__xgWYMjDEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__xgWYcjDEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__xkn0MjDEe2lt4R-IEQ2mg" type="3003" element="__wlJUMjDEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__xkn0cjDEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xkn0sjDEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__xNbccjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__xNbcsjDEe2lt4R-IEQ2mg" x="936" y="120" width="160" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_n5FTQMjEEe2lt4R-IEQ2mg" type="2001" element="_n4rDkMjEEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_n5HIcMjEEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_n5HIccjEEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_n5IWkMjEEe2lt4R-IEQ2mg" type="3003" element="_n4rqoMjEEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_n5IWkcjEEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n5IWksjEEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_n5FTQcjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n5FTQsjEEe2lt4R-IEQ2mg" x="915" width="202" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_bwAzMMjFEe2lt4R-IEQ2mg" type="2001" element="_bv5ecMjFEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_bwBaQMjFEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_bwBaQcjFEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bwBaQsjFEe2lt4R-IEQ2mg" type="3003" element="_bv5eccjFEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_bwBaQ8jFEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bwBaRMjFEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_bwAzMcjFEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bwAzMsjFEe2lt4R-IEQ2mg" x="435" y="525" width="217" height="60"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_nGTWAMjFEe2lt4R-IEQ2mg" type="2001" element="_nGBpMMjFEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_nGUkIMjFEe2lt4R-IEQ2mg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_nGUkIcjFEe2lt4R-IEQ2mg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_nGXAYMjFEe2lt4R-IEQ2mg" type="3017" element="_nGC3UMjFEe2lt4R-IEQ2mg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nGXAYcjFEe2lt4R-IEQ2mg" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGXAYsjFEe2lt4R-IEQ2mg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_nGTWAcjFEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nGTWAsjFEe2lt4R-IEQ2mg" x="225" y="480" width="160" height="160"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_MpjCgNPKEe2u2sjyJR-JVA" type="2001" element="_MpO5cNPKEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_Mp5n0NPKEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Mp5n0dPKEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_MqKtkNPKEe2u2sjyJR-JVA" type="3003" element="_MpQuoNPKEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_MqKtkdPKEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MqKtktPKEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_MpjCgdPKEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MpjCgtPKEe2u2sjyJR-JVA" x="195" y="-8" width="331" height="144"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_aGaQQNPKEe2u2sjyJR-JVA" type="2001" element="_aFkiwdPKEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_aGa3UNPKEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_aGa3UdPKEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_aGbeYNPKEe2u2sjyJR-JVA" type="3003" element="_aFlJ0NPKEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_aGbeYdPKEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aGbeYtPKEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_aGaQQdPKEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aGaQQtPKEe2u2sjyJR-JVA" x="705" y="20" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-Z9scNPLEe2u2sjyJR-JVA" type="2001" element="_-ZP6xNPLEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_-Z-6kNPLEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-Z-6kdPLEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-aAIsNPLEe2u2sjyJR-JVA" type="3003" element="_-ZQh0NPLEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-aAIsdPLEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-aAIstPLEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-Z9scdPLEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Z9sctPLEe2u2sjyJR-JVA" x="604" y="15" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_A9jDgNPMEe2u2sjyJR-JVA" type="2001" element="_A8_C2tPMEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_A9jDg9PMEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_A9jDhNPMEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A9jqkNPMEe2u2sjyJR-JVA" type="3003" element="_A8_p4NPMEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_A9jqkdPMEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9jqktPMEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_A9jDgdPMEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A9jDgtPMEe2u2sjyJR-JVA" x="645" y="135" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_FGsDINPMEe2u2sjyJR-JVA" type="2001" element="_FF6AAdPMEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_FGsqMNPMEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_FGsqMdPMEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_FGtRQNPMEe2u2sjyJR-JVA" type="3003" element="_FF6nENPMEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_FGtRQdPMEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FGtRQtPMEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_FGsDIdPMEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FGsDItPMEe2u2sjyJR-JVA" x="585" y="120" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_KIcs0NPMEe2u2sjyJR-JVA" type="2001" element="_KHzMmtPMEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_KIcs09PMEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_KIcs1NPMEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KIdT4NPMEe2u2sjyJR-JVA" type="3003" element="_KHzzoNPMEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_KIdT4dPMEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KIdT4tPMEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_KIcs0dPMEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KIcs0tPMEe2u2sjyJR-JVA" x="651" y="59" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SOltgNPMEe2u2sjyJR-JVA" type="2001" element="_SOEwLNPMEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_SOmUktPMEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_SOmUk9PMEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SOm7oNPMEe2u2sjyJR-JVA" type="3003" element="_SOFXMNPMEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SOm7odPMEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SOm7otPMEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SOmUkNPMEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SOmUkdPMEe2u2sjyJR-JVA" x="565" y="49" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ZAoCANPMEe2u2sjyJR-JVA" type="2001" element="_ZAFPdNPMEe2u2sjyJR-JVA">
+          <children xmi:type="notation:Node" xmi:id="_ZAoCA9PMEe2u2sjyJR-JVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ZAoCBNPMEe2u2sjyJR-JVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZAopENPMEe2u2sjyJR-JVA" type="3003" element="_ZAFPddPMEe2u2sjyJR-JVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ZAopEdPMEe2u2sjyJR-JVA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZAopEtPMEe2u2sjyJR-JVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ZAoCAdPMEe2u2sjyJR-JVA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZAoCAtPMEe2u2sjyJR-JVA" x="165" y="45" width="301" height="121"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_iUEoAsjDEe2lt4R-IEQ2mg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_iWUDsMjDEe2lt4R-IEQ2mg" type="4001" element="_iU68kMjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iV-FcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWVR0MjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWVR0cjDEe2lt4R-IEQ2mg" x="114" y="16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWWf8MjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWWf8cjDEe2lt4R-IEQ2mg" x="-29" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWXuEMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWXuEcjDEe2lt4R-IEQ2mg" x="-29" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWUDscjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWUDssjDEe2lt4R-IEQ2mg" fontColor="4539717" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWUDs8jDEe2lt4R-IEQ2mg" points="[0, 0, 255, 75]$[0, -30, 255, 45]$[-255, -30, 0, 45]$[-255, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWgQ8MjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWgQ8cjDEe2lt4R-IEQ2mg" id="(0.5,0.9836065573770492)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWg4AMjDEe2lt4R-IEQ2mg" type="4001" element="_iU9Y0MjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iV-sgsjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWhfE8jDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWhfFMjDEe2lt4R-IEQ2mg" x="38" y="-16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWiGIMjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWiGIcjDEe2lt4R-IEQ2mg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWiGIsjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWiGI8jDEe2lt4R-IEQ2mg" x="-30" y="-9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWhfEMjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWhfEcjDEe2lt4R-IEQ2mg" fontColor="4539717" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWhfEsjDEe2lt4R-IEQ2mg" points="[0, 0, -90, 75]$[0, -30, -90, 45]$[90, -30, 0, 45]$[90, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWitMMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWitMcjDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWitMsjDEe2lt4R-IEQ2mg" type="4001" element="_iU-m8sjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iWAhsMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWjUQMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWjUQcjDEe2lt4R-IEQ2mg" x="128" y="-16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWjUQsjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWjUQ8jDEe2lt4R-IEQ2mg" x="-11" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWjURMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWjURcjDEe2lt4R-IEQ2mg" x="-29" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWitM8jDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWitNMjDEe2lt4R-IEQ2mg" fontColor="4539717" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWitNcjDEe2lt4R-IEQ2mg" points="[0, 0, -270, 75]$[0, -30, -270, 45]$[270, -30, 0, 45]$[270, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWj7UMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWj7UcjDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWj7UsjDEe2lt4R-IEQ2mg" type="4001" element="_iU_1EMjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iWFaMsjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWkiYMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWkiYcjDEe2lt4R-IEQ2mg" x="33" y="16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWkiYsjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWkiY8jDEe2lt4R-IEQ2mg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWlJcMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWlJccjDEe2lt4R-IEQ2mg" x="18" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWj7U8jDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWj7VMjDEe2lt4R-IEQ2mg" fontColor="4539717" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWj7VcjDEe2lt4R-IEQ2mg" points="[0, 0, 81, 75]$[0, -30, 81, 45]$[-81, -30, 0, 45]$[-81, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWlJcsjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWlJc8jDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWlwgMjDEe2lt4R-IEQ2mg" type="4001" element="_iVAcIsjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iVp8YMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWlwhMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWlwhcjDEe2lt4R-IEQ2mg" x="121" y="-23"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWlwhsjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWlwh8jDEe2lt4R-IEQ2mg" x="13" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWmXkMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWmXkcjDEe2lt4R-IEQ2mg" x="-43" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWlwgcjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWlwgsjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWlwg8jDEe2lt4R-IEQ2mg" points="[0, 60, 255, -135]$[0, 90, 255, -105]$[-255, 90, 0, -105]$[-255, 135, 0, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWmXksjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWmXk8jDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWmXlMjDEe2lt4R-IEQ2mg" type="4001" element="_iVBqQsjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iVrKgMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWm-oMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWm-ocjDEe2lt4R-IEQ2mg" x="127" y="23"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWnlsMjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWnlscjDEe2lt4R-IEQ2mg" x="-31" y="-19"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWnlssjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWnls8jDEe2lt4R-IEQ2mg" x="17" y="77"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWmXlcjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWmXlsjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWmXl8jDEe2lt4R-IEQ2mg" points="[0, 60, -270, -135]$[0, 90, -270, -105]$[270, 90, 0, -105]$[270, 135, 0, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWoMwMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWoMwcjDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWoMwsjDEe2lt4R-IEQ2mg" type="4001" element="_iVC4YMjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iVsYoMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWoz0MjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWoz0cjDEe2lt4R-IEQ2mg" x="209" y="23"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWpa4MjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWpa4cjDEe2lt4R-IEQ2mg" x="-36" y="-24"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWpa4sjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWpa48jDEe2lt4R-IEQ2mg" x="-116" y="-37"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWoMw8jDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWoMxMjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWoMxcjDEe2lt4R-IEQ2mg" points="[0, 60, -435, -135]$[0, 90, -435, -105]$[435, 90, 0, -105]$[435, 135, 0, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWpa5MjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWpa5cjDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWqB8MjDEe2lt4R-IEQ2mg" type="4001" element="_iVDfcMjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iVtmwcjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWqB9MjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWqB9cjDEe2lt4R-IEQ2mg" x="37" y="23"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWqB9sjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWqB98jDEe2lt4R-IEQ2mg" x="-18" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWqpAMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWqpAcjDEe2lt4R-IEQ2mg" x="30" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWqB8cjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWqB8sjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWqB88jDEe2lt4R-IEQ2mg" points="[0, 60, -90, -135]$[0, 90, -90, -105]$[90, 90, 0, -105]$[90, 135, 0, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWqpAsjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWqpA8jDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWrQEMjDEe2lt4R-IEQ2mg" type="4001" element="_iVEGgMjDEe2lt4R-IEQ2mg" source="_iVVMQMjDEe2lt4R-IEQ2mg" target="_iVvb8MjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWr3IMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWr3IcjDEe2lt4R-IEQ2mg" x="38" y="-23"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWr3IsjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWr3I8jDEe2lt4R-IEQ2mg" x="-16" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWr3JMjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWr3JcjDEe2lt4R-IEQ2mg" x="27" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWrQEcjDEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWrQEsjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWrQE8jDEe2lt4R-IEQ2mg" points="[0, 60, 81, -135]$[0, 90, 81, -105]$[-81, 90, 0, -105]$[-81, 135, 0, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWseMMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWseMcjDEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWseMsjDEe2lt4R-IEQ2mg" type="4001" element="_iVJmEMjDEe2lt4R-IEQ2mg" source="_iWC98MjDEe2lt4R-IEQ2mg" target="_iV83UMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWtFQMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWtFQcjDEe2lt4R-IEQ2mg" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWtsUMjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWtsUcjDEe2lt4R-IEQ2mg" x="32"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWtsUsjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWtsU8jDEe2lt4R-IEQ2mg" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWseM8jDEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWseNMjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWseNcjDEe2lt4R-IEQ2mg" points="[-18, 60, -21, -135]$[-18, 135, -21, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWuTYMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWuTYcjDEe2lt4R-IEQ2mg" id="(0.40816326530612246,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iWuTYsjDEe2lt4R-IEQ2mg" type="4001" element="_iVLbQMjDEe2lt4R-IEQ2mg" source="_iV-FcMjDEe2lt4R-IEQ2mg" target="_iV83UMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_iWu6cMjDEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWu6ccjDEe2lt4R-IEQ2mg" x="38" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWvhgMjDEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWvhgcjDEe2lt4R-IEQ2mg" x="-3" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iWvhgsjDEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iWvhg8jDEe2lt4R-IEQ2mg" x="13"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iWuTY8jDEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iWuTZMjDEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWuTZcjDEe2lt4R-IEQ2mg" points="[-80, 30, 163, -165]$[-143, 30, 100, -165]$[-143, 135, 100, -60]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWwIkMjDEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWwIkcjDEe2lt4R-IEQ2mg" id="(0.40816326530612246,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_HlIDsMjEEe2lt4R-IEQ2mg" type="4001" element="_HkqwsMjEEe2lt4R-IEQ2mg" source="_iV-sgsjDEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_HlJR0MjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HlJR0cjEEe2lt4R-IEQ2mg" x="-57" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HlJR0sjEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HlJR08jEEe2lt4R-IEQ2mg" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HlJ44MjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HlJ44cjEEe2lt4R-IEQ2mg" x="-17" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HlIDscjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_HlIDssjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HlIDs8jEEe2lt4R-IEQ2mg" points="[15, 0, 84, 75]$[15, -30, 84, 45]$[-75, -30, -6, 45]$[-75, -75, -6, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HlKf8MjEEe2lt4R-IEQ2mg" id="(0.375,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HlKf8cjEEe2lt4R-IEQ2mg" id="(0.50625,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IdnK4MjEEe2lt4R-IEQ2mg" type="4001" element="_IdOJVMjEEe2lt4R-IEQ2mg" source="_iWFaMsjDEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_IdoZAMjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IdoZAcjEEe2lt4R-IEQ2mg" x="-45" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IdoZAsjEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IdoZA8jEEe2lt4R-IEQ2mg" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IdoZBMjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IdoZBcjEEe2lt4R-IEQ2mg" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IdnK4cjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IdnK4sjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IdnK48jEEe2lt4R-IEQ2mg" points="[0, 0, -81, 75]$[0, -30, -81, 45]$[76, -30, -5, 45]$[76, -75, -5, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IdpnIMjEEe2lt4R-IEQ2mg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IdpnIcjEEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_JOyJIMjEEe2lt4R-IEQ2mg" type="4001" element="_JOcK4MjEEe2lt4R-IEQ2mg" source="_iV-FcMjDEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_JOzXQMjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JOzXQcjEEe2lt4R-IEQ2mg" x="-122" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JOz-UMjEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JOz-UcjEEe2lt4R-IEQ2mg" x="7" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JOz-UsjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JOz-U8jEEe2lt4R-IEQ2mg" x="13" y="-13"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_JOyJIcjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_JOyJIsjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JOyJI8jEEe2lt4R-IEQ2mg" points="[-15, 0, -231, 75]$[-15, -30, -231, 45]$[225, -30, 9, 45]$[225, -75, 9, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JO0lYMjEEe2lt4R-IEQ2mg" id="(0.65625,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JO0lYcjEEe2lt4R-IEQ2mg" id="(0.4125,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_S9K6AMjEEe2lt4R-IEQ2mg" type="4001" element="_S8zGkMjEEe2lt4R-IEQ2mg" source="_iWAhsMjDEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_S9LhEMjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S9LhEcjEEe2lt4R-IEQ2mg" x="-145" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S9MIIMjEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S9MIIcjEEe2lt4R-IEQ2mg" x="94" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S9MIIsjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S9MII8jEEe2lt4R-IEQ2mg" x="-2" y="35"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_S9K6AcjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_S9K6AsjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S9K6A8jEEe2lt4R-IEQ2mg" points="[80, -30, 215, 75]$[80, -60, 215, 45]$[-195, -60, -60, 45]$[-195, -105, -60, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S9MvMMjEEe2lt4R-IEQ2mg" id="(0.0,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S9MvMcjEEe2lt4R-IEQ2mg" id="(0.84375,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_s8mQcMjEEe2lt4R-IEQ2mg" type="4001" element="_s8eUoMjEEe2lt4R-IEQ2mg" source="_n5FTQMjEEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_s8m3gcjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s8m3gsjEEe2lt4R-IEQ2mg" x="6" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_s8m3g8jEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s8m3hMjEEe2lt4R-IEQ2mg" x="-1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_s8nekMjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s8nekcjEEe2lt4R-IEQ2mg" x="-7" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_s8mQccjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_s8mQcsjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_s8m3gMjEEe2lt4R-IEQ2mg" points="[-5, 0, -5, -90]$[-5, 60, -5, -30]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_s8neksjEEe2lt4R-IEQ2mg" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_s8nek8jEEe2lt4R-IEQ2mg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-DoC0MjEEe2lt4R-IEQ2mg" type="4001" element="_-Db1nMjEEe2lt4R-IEQ2mg" source="_iWC98MjDEe2lt4R-IEQ2mg" target="__xNbcMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_-DoC1MjEEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-DoC1cjEEe2lt4R-IEQ2mg" x="-255" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-Dop4MjEEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Dop4cjEEe2lt4R-IEQ2mg" x="116" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-Dop4sjEEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Dop48jEEe2lt4R-IEQ2mg" x="-105" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-DoC0cjEEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-DoC0sjEEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-DoC08jEEe2lt4R-IEQ2mg" points="[-80, -30, -421, 120]$[-80, -60, -421, 90]$[416, -60, 75, 90]$[416, -105, 75, 45]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-Dop5MjEEe2lt4R-IEQ2mg" id="(1.0,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-Dop5cjEEe2lt4R-IEQ2mg" id="(0.0,0.25)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_i0FS4MjFEe2lt4R-IEQ2mg" type="4001" element="_izvUoMjFEe2lt4R-IEQ2mg" source="_bwAzMMjFEe2lt4R-IEQ2mg" target="_iV83UMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_i0F58MjFEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i0F58cjFEe2lt4R-IEQ2mg"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_i0F58sjFEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i0F588jFEe2lt4R-IEQ2mg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_i0GhAMjFEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i0GhAcjFEe2lt4R-IEQ2mg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_i0FS4cjFEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_i0FS4sjFEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i0FS48jFEe2lt4R-IEQ2mg" points="[0, 0, 0, 75]$[0, -75, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i0GhAsjFEe2lt4R-IEQ2mg" id="(0.46543778801843316,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i0HIEMjFEe2lt4R-IEQ2mg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_NMbYgMjGEe2lt4R-IEQ2mg" type="4001" element="_NMH2gMjGEe2lt4R-IEQ2mg" source="_nGTWAMjFEe2lt4R-IEQ2mg" target="_iV83UMjDEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_NMb_kMjGEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NMb_kcjGEe2lt4R-IEQ2mg" x="-22" y="52"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NMb_ksjGEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NMb_k8jGEe2lt4R-IEQ2mg" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NMb_lMjGEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NMb_lcjGEe2lt4R-IEQ2mg" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_NMbYgcjGEe2lt4R-IEQ2mg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_NMbYgsjGEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NMbYg8jGEe2lt4R-IEQ2mg" points="[1, -12, -132, 75]$[1, -87, -132, 0]$[133, -87, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NMcmoMjGEe2lt4R-IEQ2mg" id="(0.5,0.075)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NMcmocjGEe2lt4R-IEQ2mg" id="(0.0,0.25)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_SnQCcMjGEe2lt4R-IEQ2mg" type="4001" element="_Sm_jwMjGEe2lt4R-IEQ2mg" source="_iVtmwcjDEe2lt4R-IEQ2mg" target="_nGTWAMjFEe2lt4R-IEQ2mg">
+          <children xmi:type="notation:Node" xmi:id="_SnRQkMjGEe2lt4R-IEQ2mg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SnRQkcjGEe2lt4R-IEQ2mg" x="-373" y="67"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SnRQksjGEe2lt4R-IEQ2mg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SnRQk8jGEe2lt4R-IEQ2mg" x="22" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SnRQlMjGEe2lt4R-IEQ2mg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SnRQlcjGEe2lt4R-IEQ2mg" x="-12" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SnQCccjGEe2lt4R-IEQ2mg" routing="Tree"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_SnQCcsjGEe2lt4R-IEQ2mg" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SnQCc8jGEe2lt4R-IEQ2mg" points="[0, 30, 801, 25]$[0, 120, 801, 115]$[-801, 120, 0, 115]$[-801, 85, 0, 80]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NUljkNPKEe2u2sjyJR-JVA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SnRQl8jGEe2lt4R-IEQ2mg" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iVMpYMjDEe2lt4R-IEQ2mg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_iVMpYcjDEe2lt4R-IEQ2mg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUe3sMjDEe2lt4R-IEQ2mg" name="User" outgoingEdges="_iU68kMjDEe2lt4R-IEQ2mg _iU9Y0MjDEe2lt4R-IEQ2mg _iU-m8sjDEe2lt4R-IEQ2mg _iU_1EMjDEe2lt4R-IEQ2mg _iVAcIsjDEe2lt4R-IEQ2mg _iVBqQsjDEe2lt4R-IEQ2mg _iVC4YMjDEe2lt4R-IEQ2mg _iVDfcMjDEe2lt4R-IEQ2mg _iVEGgMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <semanticElements xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUgs4MjDEe2lt4R-IEQ2mg" labelSize="9" showIcon="false" labelPosition="node" width="16" height="6" color="252,233,79">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='HumanUser']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='HumanUser']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUiiEMjDEe2lt4R-IEQ2mg" name="Service::TurnOnSmartLightDevice" incomingEdges="_iVAcIsjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.1"/>
+      <semanticElements xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUjwMMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUk-UMjDEe2lt4R-IEQ2mg" name="Service::ViewSmartLightDeviceStatus" incomingEdges="_iVBqQsjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.2"/>
+      <semanticElements xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUllYMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUmMccjDEe2lt4R-IEQ2mg" name="Service::DebugHardware" incomingEdges="_iVC4YMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.3"/>
+      <semanticElements xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUmMcsjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUnakcjDEe2lt4R-IEQ2mg" name="Service::ViewLogs" outgoingEdges="_Sm_jwMjGEe2lt4R-IEQ2mg" incomingEdges="_iVDfcMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.4"/>
+      <semanticElements xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUoBoMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUp20MjDEe2lt4R-IEQ2mg" name="Service::TurnOffSmartLightDevice" incomingEdges="_iVEGgMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.5"/>
+      <semanticElements xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.5"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUqd4MjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Service']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUrE8MjDEe2lt4R-IEQ2mg" name="PhysicalEntity::LED" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.0"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUrsAMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUsTEcjDEe2lt4R-IEQ2mg" name="PhysicalEntity::WiFiLED" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.1"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUs6IMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUthMMjDEe2lt4R-IEQ2mg" name="PhysicalEntity::ErrorDisplay" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.2"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUthMcjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUuIQcjDEe2lt4R-IEQ2mg" name="PhysicalEntity::LDR" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.3"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUuIQsjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUuvUcjDEe2lt4R-IEQ2mg" name="PhysicalEntity::DebugButton" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.4"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUvWYMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUv9cMjDEe2lt4R-IEQ2mg" name="PhysicalEntity::PhysicalSurrounding" incomingEdges="_iVJmEMjDEe2lt4R-IEQ2mg _iVLbQMjDEe2lt4R-IEQ2mg _izvUoMjFEe2lt4R-IEQ2mg _NMH2gMjGEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.5"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.5"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iUwkgMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__wkiQMjDEe2lt4R-IEQ2mg" name="PhysicalEntity::SmartLightDevice" incomingEdges="_HkqwsMjEEe2lt4R-IEQ2mg _IdOJVMjEEe2lt4R-IEQ2mg _JOcK4MjEEe2lt4R-IEQ2mg _S8zGkMjEEe2lt4R-IEQ2mg _s8eUoMjEEe2lt4R-IEQ2mg _-Db1nMjEEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.6"/>
+      <semanticElements xmi:type="iotdomainmodel:PhysicalEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@physicalEntities.6"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="__wlJUMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='PhysicalEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iUyZsMjDEe2lt4R-IEQ2mg" name="Actuator::LED" outgoingEdges="_iVLbQMjDEe2lt4R-IEQ2mg _JOcK4MjEEe2lt4R-IEQ2mg" incomingEdges="_iU68kMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2"/>
+      <semanticElements xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iU0O4MjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="114,159,207">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iU018cjDEe2lt4R-IEQ2mg" name="Actuator::WiFiLED" outgoingEdges="_HkqwsMjEEe2lt4R-IEQ2mg" incomingEdges="_iU9Y0MjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3"/>
+      <semanticElements xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iU1dAMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="114,159,207">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iU2EEcjDEe2lt4R-IEQ2mg" name="Actuator::ErrorDisplay" outgoingEdges="_S8zGkMjEEe2lt4R-IEQ2mg" incomingEdges="_iU-m8sjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4"/>
+      <semanticElements xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iU2EEsjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="114,159,207">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Actuator']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iU2rIcjDEe2lt4R-IEQ2mg" name="Sensor::LDR" outgoingEdges="_iVJmEMjDEe2lt4R-IEQ2mg _-Db1nMjEEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0"/>
+      <semanticElements xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iU35QMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="114,159,207">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Sensor']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Sensor']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_iU4gUcjDEe2lt4R-IEQ2mg" name="Sensor::DebugButton" outgoingEdges="_IdOJVMjEEe2lt4R-IEQ2mg" incomingEdges="_iU_1EMjDEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.1"/>
+      <semanticElements xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_iU5HYMjDEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="114,159,207">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Sensor']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='Sensor']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iU68kMjDEe2lt4R-IEQ2mg" name="&lt;&lt;interacts with>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUyZsMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iU7joMjDEe2lt4R-IEQ2mg" lineStyle="dash" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iU7jocjDEe2lt4R-IEQ2mg" showIcon="false" labelColor="69,69,69"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iU9Y0MjDEe2lt4R-IEQ2mg" name="&lt;&lt;interacts with>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iU018cjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iU9_4MjDEe2lt4R-IEQ2mg" lineStyle="dash" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iU9_4cjDEe2lt4R-IEQ2mg" showIcon="false" labelColor="69,69,69"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iU-m8sjDEe2lt4R-IEQ2mg" name="&lt;&lt;interacts with>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iU2EEcjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iU_OAMjDEe2lt4R-IEQ2mg" lineStyle="dash" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iU_OAcjDEe2lt4R-IEQ2mg" showIcon="false" labelColor="69,69,69"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iU_1EMjDEe2lt4R-IEQ2mg" name="&lt;&lt;interacts with>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iU4gUcjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iU_1EcjDEe2lt4R-IEQ2mg" lineStyle="dash" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iU_1EsjDEe2lt4R-IEQ2mg" showIcon="false" labelColor="69,69,69"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInteractsWithEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVAcIsjDEe2lt4R-IEQ2mg" name="&lt;&lt;invokes>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUiiEMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVBDMMjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVBDMcjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVBqQsjDEe2lt4R-IEQ2mg" name="&lt;&lt;invokes>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUk-UMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVCRUMjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVCRUcjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVC4YMjDEe2lt4R-IEQ2mg" name="&lt;&lt;invokes>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUmMccjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVC4YcjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVC4YsjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVDfcMjDEe2lt4R-IEQ2mg" name="&lt;&lt;invokes>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUnakcjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVDfccjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVDfcsjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVEGgMjDEe2lt4R-IEQ2mg" name="&lt;&lt;invokes>>" sourceNode="_iUe3sMjDEe2lt4R-IEQ2mg" targetNode="_iUp20MjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:HumanUser" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVEGgcjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVEGgsjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='UserInvokesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVJmEMjDEe2lt4R-IEQ2mg" name="&lt;&lt;monitors>>" sourceNode="_iU2rIcjDEe2lt4R-IEQ2mg" targetNode="_iUv9cMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVJmEcjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='SensorMonitorsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVJmEsjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='SensorMonitorsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iVLbQMjDEe2lt4R-IEQ2mg" name="&lt;&lt;acts on>>" sourceNode="_iUyZsMjDEe2lt4R-IEQ2mg" targetNode="_iUv9cMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iVLbQcjDEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ActuatorActsOnEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iVLbQsjDEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ActuatorActsOnEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HkqwsMjEEe2lt4R-IEQ2mg" name="&lt;&lt;attachedTo>>" sourceNode="_iU018cjDEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Hkr-0MjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Hkr-0cjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IdOJVMjEEe2lt4R-IEQ2mg" name="&lt;&lt;attachedTo>>" sourceNode="_iU4gUcjDEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IdOwYMjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IdOwYcjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_JOcK4MjEEe2lt4R-IEQ2mg" name="&lt;&lt;attachedTo>>" sourceNode="_iUyZsMjDEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_JOcx8MjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JOcx8cjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_S8zGkMjEEe2lt4R-IEQ2mg" name="&lt;&lt;attachedTo>>" sourceNode="_iU2EEcjDEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Actuator" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_S8ztoMjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_S8ztocjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_n4rDkMjEEe2lt4R-IEQ2mg" name="VirtualEntity::SmartLightDeviceADA" outgoingEdges="_s8eUoMjEEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.0"/>
+      <semanticElements xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_n4rqoMjEEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='VirtualEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='VirtualEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_bv5ecMjFEe2lt4R-IEQ2mg" name="VirtualEntity::PhysicalSurroundingPDA" outgoingEdges="_izvUoMjFEe2lt4R-IEQ2mg" width="16" height="6" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.1"/>
+      <semanticElements xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_bv5eccjFEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" width="16" height="6" color="138,226,52">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='VirtualEntity']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='VirtualEntity']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_s8eUoMjEEe2lt4R-IEQ2mg" name="&lt;&lt;represents>>" sourceNode="_n4rDkMjEEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_s8eUocjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <customFeatures>routingStyle</customFeatures>
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='VirtualEntityRepresentsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_s8eUosjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='VirtualEntityRepresentsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-Db1nMjEEe2lt4R-IEQ2mg" name="&lt;&lt;attachedTo>>" sourceNode="_iU2rIcjDEe2lt4R-IEQ2mg" targetNode="__wkiQMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Sensor" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-DccoMjEEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-DccocjEEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='DeviceAttachedToEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_izvUoMjFEe2lt4R-IEQ2mg" name="&lt;&lt;represents>>" sourceNode="_bv5ecMjFEe2lt4R-IEQ2mg" targetNode="_iUv9cMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:VirtualEntity" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@virtualEntities.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_izv7sMjFEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='VirtualEntityRepresentsEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_izv7scjFEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='VirtualEntityRepresentsEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_nGBpMMjFEe2lt4R-IEQ2mg" name="NetworkResource::Logs" outgoingEdges="_NMH2gMjGEe2lt4R-IEQ2mg" incomingEdges="_Sm_jwMjGEe2lt4R-IEQ2mg" width="16" height="16" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:NetworkResource" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@resources.0"/>
+      <semanticElements xmi:type="iotdomainmodel:NetworkResource" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@resources.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_nGC3UMjFEe2lt4R-IEQ2mg" labelSize="10" showIcon="false" labelPosition="node" color="138,226,52">
+        <customFeatures>color</customFeatures>
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='NetworkResource']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='NetworkResource']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_NMH2gMjGEe2lt4R-IEQ2mg" name="&lt;&lt;has information on>>" sourceNode="_nGBpMMjFEe2lt4R-IEQ2mg" targetNode="_iUv9cMjDEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:NetworkResource" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@resources.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NMIdkMjGEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="manhattan">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ResourceHasInfoOnEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_NMIdkcjGEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ResourceHasInfoOnEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Sm_jwMjGEe2lt4R-IEQ2mg" name="&lt;&lt;exposes>>" sourceNode="_iUnakcjDEe2lt4R-IEQ2mg" targetNode="_nGBpMMjFEe2lt4R-IEQ2mg">
+      <target xmi:type="iotdomainmodel:Service" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@users.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SnAK0MjGEe2lt4R-IEQ2mg" lineStyle="dot" size="2" routingStyle="tree" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ServiceExposesEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SnAK0cjGEe2lt4R-IEQ2mg" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@edgeMappings[name='ServiceExposesEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ZAFPdNPMEe2u2sjyJR-JVA" name="function Monitored{&#xA;int light_intensity = analogRead(kLightSensing_LDR); return light_intensity;&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0/@codeAnnotations.0"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.0/@codeAnnotations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_ZAFPddPMEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_MpO5cNPKEe2u2sjyJR-JVA" name="function Monitored{&#xA;int state = digitalRead(kDebug_DebugButton); return state;&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.1/@codeAnnotations.0"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.1/@codeAnnotations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_MpQuoNPKEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_aFkiwdPKEe2u2sjyJR-JVA" name="function TurnOn{&#xA;digitalWrite(kSmartLight_LED, HIGH);&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2/@codeAnnotations.0"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2/@codeAnnotations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_aFlJ0NPKEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-ZP6xNPLEe2u2sjyJR-JVA" name="function TurnOff{&#xA;digitalWrite(kSmartLight_LED, LOW);&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2/@codeAnnotations.1"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.2/@codeAnnotations.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_-ZQh0NPLEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_A8_C2tPMEe2u2sjyJR-JVA" name="function TurnOn{&#xA;digitalWrite(kWiFiLED_WiFiLED, HIGH);&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3/@codeAnnotations.0"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3/@codeAnnotations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_A8_p4NPMEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_FF6AAdPMEe2u2sjyJR-JVA" name="function TurnOff{&#xA;digitalWrite(kWiFiLED_WiFiLED, LOW);&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3/@codeAnnotations.1"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.3/@codeAnnotations.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_FF6nENPMEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KHzMmtPMEe2u2sjyJR-JVA" name="function ShowNormalModeCode{&#xA;digitalWrite(kErrorDisplay_a, LOW ); digitalWrite(kErrorDisplay_b, LOW ); digitalWrite(kErrorDisplay_c, LOW ); digitalWrite(kErrorDisplay_d, LOW );&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4/@codeAnnotations.0"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4/@codeAnnotations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_KHzzoNPMEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_SOEwLNPMEe2u2sjyJR-JVA" name="function ShowNoConnectionModeCode{&#xA;digitalWrite(kErrorDisplay_a, HIGH); digitalWrite(kErrorDisplay_b, LOW ); digitalWrite(kErrorDisplay_c, LOW ); digitalWrite(kErrorDisplay_d, LOW );&#xA;}" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4/@codeAnnotations.1"/>
+      <semanticElements xmi:type="iotdomainmodel:CodeAnnotation" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#//@devices.4/@codeAnnotations.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_SOFXMNPMEe2u2sjyJR-JVA" labelPosition="node" width="20">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer/@nodeMappings[name='CodeAnnotation']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_iTk4wMjDEe2lt4R-IEQ2mg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/mde.iot.ucm4iot.iotdomainmodel.design/description/iotdomainmodel.odesign#//@ownedViewpoints[name='IoTDomainModel']/@ownedRepresentations[name='IoT%20Domain%20Model']/@defaultLayer"/>
+    <target xmi:type="iotdomainmodel:IoTDomainModel" href="mde.iot.smartlights.v5.change_request_1.iotdomainmodel#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

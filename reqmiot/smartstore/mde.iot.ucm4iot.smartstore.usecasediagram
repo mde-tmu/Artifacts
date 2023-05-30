@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usecasediagram:UseCaseDiagram xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usecasediagram="http://www.ucm4iot.org/mde/iot/usecasediagram" xmlns:xmi="http://www.omg.org/XMI">
+	<actors xsi:type="usecasediagram:HumanActor" name="Customer" lowerBound="1" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.2 //@scopes.0/@usecases.4 //@scopes.0/@usecases.5 //@scopes.0/@usecases.6 //@scopes.0/@usecases.7 //@scopes.0/@usecases.8 //@scopes.0/@usecases.9 //@scopes.0/@usecases.10 //@scopes.0/@usecases.15 //@scopes.0/@usecases.24" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="Staff" lowerBound="1" usecase="//@scopes.0/@usecases.1 //@scopes.0/@usecases.3 //@scopes.0/@usecases.10 //@scopes.0/@usecases.18 //@scopes.0/@usecases.19 //@scopes.0/@usecases.20 //@scopes.0/@usecases.21 //@scopes.0/@usecases.22 //@scopes.0/@usecases.23 //@scopes.0/@usecases.24 //@scopes.0/@usecases.30" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="MobileDevice" lowerBound="1" usecase="//@scopes.0/@usecases.5 //@scopes.0/@usecases.10 //@scopes.0/@usecases.15 //@scopes.0/@usecases.17 //@scopes.0/@usecases.19 //@scopes.0/@usecases.21" upperBound="1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="Camera" lowerBound="1" usecase="//@scopes.0/@usecases.6 //@scopes.0/@usecases.13 //@scopes.0/@usecases.14 //@scopes.0/@usecases.20 //@scopes.0/@usecases.27 //@scopes.0/@usecases.28" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="EntryGate" lowerBound="1" usecase="//@scopes.0/@usecases.6 //@scopes.0/@usecases.7 //@scopes.0/@usecases.17 //@scopes.0/@usecases.20 //@scopes.0/@usecases.24" upperBound="1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="ExitGate" lowerBound="1" usecase="//@scopes.0/@usecases.8 //@scopes.0/@usecases.21 //@scopes.0/@usecases.24" upperBound="1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="PaymentService" lowerBound="1" usecase="//@scopes.0/@usecases.10 //@scopes.0/@usecases.15 //@scopes.0/@usecases.16" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="PressureSensor" lowerBound="1" usecase="//@scopes.0/@usecases.12" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="WeightSensor" lowerBound="1" usecase="//@scopes.0/@usecases.12" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="TagReader" lowerBound="1" usecase="//@scopes.0/@usecases.12" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="CreditCard" lowerBound="1" usecase="//@scopes.0/@usecases.15 //@scopes.0/@usecases.17" upperBound="1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="Admin" lowerBound="1" usecase="//@scopes.0/@usecases.19" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:SoftwareActor" name="FireDetectionSystem" lowerBound="1" usecase="//@scopes.0/@usecases.23" upperBound="1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="EmergencyExit" lowerBound="2" usecase="//@scopes.0/@usecases.24" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="PoliceStation" lowerBound="-1" usecase="//@scopes.0/@usecases.24" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="AttackAlertSwitch" lowerBound="-1" usecase="//@scopes.0/@usecases.24" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:HumanActor" name="ServicePerson" lowerBound="1" usecase="//@scopes.0/@usecases.25 //@scopes.0/@usecases.30" upperBound="-1"/>
+	<scopes name="SmartStoreSystem">
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="UseSmartStore">
+			<includes includedCase="//@scopes.0/@usecases.5"/>
+			<includes includedCase="//@scopes.0/@usecases.2"/>
+			<includes includedCase="//@scopes.0/@usecases.4"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="WorkAtSmartStore">
+			<includes includedCase="//@scopes.0/@usecases.19"/>
+			<includes includedCase="//@scopes.0/@usecases.3"/>
+			<includes includedCase="//@scopes.0/@usecases.18"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="CustomerLogin"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="StaffLogin"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="Shopping">
+			<includes includedCase="//@scopes.0/@usecases.6"/>
+			<includes includedCase="//@scopes.0/@usecases.9"/>
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+			<includes includedCase="//@scopes.0/@usecases.10"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RegisterCustomer"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="EnterStore">
+			<includes includedCase="//@scopes.0/@usecases.17"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RestrictEntry">
+			<includes includedCase="//@scopes.0/@usecases.17"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ExitStore">
+			<includes includedCase="//@scopes.0/@usecases.15"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="AddToCart">
+			<includes includedCase="//@scopes.0/@usecases.12"/>
+			<includes includedCase="//@scopes.0/@usecases.13"/>
+			<includes includedCase="//@scopes.0/@usecases.11"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ReturnItem"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RemoveItem">
+			<includes includedCase="//@scopes.0/@usecases.12"/>
+			<includes includedCase="//@scopes.0/@usecases.13"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="IdentifyItem"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RecognizeCustomer"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RecognizeStaff"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ScanMobileDeviceOnExit">
+			<includes includedCase="//@scopes.0/@usecases.16"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="PayBill">
+			<includes includedCase="//@scopes.0/@usecases.11"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ScanMobileDeviceOnEntry"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="MaintainStore">
+			<includes includedCase="//@scopes.0/@usecases.20"/>
+			<includes includedCase="//@scopes.0/@usecases.22"/>
+			<includes includedCase="//@scopes.0/@usecases.21"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="EnrollStaff"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="CheckIn">
+			<includes includedCase="//@scopes.0/@usecases.17"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="CheckOut"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RestockShelves">
+			<includes includedCase="//@scopes.0/@usecases.12"/>
+			<includes includedCase="//@scopes.0/@usecases.14"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="HandleFireHazard">
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.4" exceptions="//@scopes.0/@exceptions.10"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.18" exceptions="//@scopes.0/@exceptions.10"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.8" exceptions="//@scopes.0/@exceptions.10"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.21" exceptions="//@scopes.0/@exceptions.10"/>
+			<includes includedCase="//@scopes.0/@usecases.7"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="AlertOnAttack">
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.4" exceptions="//@scopes.0/@exceptions.9"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.18" exceptions="//@scopes.0/@exceptions.9"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.8" exceptions="//@scopes.0/@exceptions.9"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.21" exceptions="//@scopes.0/@exceptions.9"/>
+			<includes includedCase="//@scopes.0/@usecases.7"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ServiceGate">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.8" exceptions="//@scopes.0/@exceptions.4"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.6" exceptions="//@scopes.0/@exceptions.3"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.20" exceptions="//@scopes.0/@exceptions.3"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.21" exceptions="//@scopes.0/@exceptions.4"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="HoldPayment">
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.16" exceptions="//@scopes.0/@exceptions.8"/>
+			<includes includedCase="//@scopes.0/@usecases.16"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RequestUser">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.6" exceptions="//@scopes.0/@exceptions.5"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.20" exceptions="//@scopes.0/@exceptions.5"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RequestCamera">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.13" exceptions="//@scopes.0/@exceptions.6"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.14" exceptions="//@scopes.0/@exceptions.6"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.11" exceptions="//@scopes.0/@exceptions.6"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.22" exceptions="//@scopes.0/@exceptions.6"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="GetResponse">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.15" exceptions="//@scopes.0/@exceptions.7"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ServiceSensor">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.12" exceptions="//@scopes.0/@exceptions.2 //@scopes.0/@exceptions.0 //@scopes.0/@exceptions.1"/>
+		</usecases>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="PressureSensorUndetected"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="WeightSensorUnavailable"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="TagUnavailable"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="EntryFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="ExitFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="CameraFailure"/>
+		<exceptions xsi:type="usecasediagram:SoftwareException" name="ImageUnmatched"/>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="CustomerUnreachable"/>
+		<exceptions xsi:type="usecasediagram:SoftwareException" name="PaymentServiceDown"/>
+		<exceptions xsi:type="usecasediagram:EnvironmentException" name="CriminalAttack"/>
+		<exceptions xsi:type="usecasediagram:EnvironmentException" name="FireHazard"/>
+	</scopes>
+</usecasediagram:UseCaseDiagram>

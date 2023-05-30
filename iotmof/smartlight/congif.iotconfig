@@ -1,0 +1,82 @@
+component SmartLight {
+	output pin LED: 5
+}
+
+component LightSensing {
+	input  pin LDR: 32
+}
+
+component WiFiLED {
+	output pin WiFiLED: 2
+}
+
+component ErrorDisplay {
+	output pin a: 27, 
+	output pin b: 14,
+	output pin c: 12, 
+	output pin d: 13
+}
+
+component Debug {
+	input pin DebugButton: 21  // TODO: INPUT_PULLUP configuration
+}
+
+function postSetup {
+	code: ||><||
+}
+
+function LDRMonitored {
+	code: ||>
+		int light_intensity = analogRead(kLightSensing_LDR);
+  		return light_intensity;
+	<||
+}
+
+function LEDTurnOn {
+	code: ||>
+		digitalWrite(kSmartLight_LED, HIGH);
+	<||
+}
+
+function LEDTurnOff {
+	code: ||>
+		digitalWrite(kSmartLight_LED, LOW);
+	<||
+}
+
+function WiFiLEDTurnOn {
+	code: ||>
+		digitalWrite(kWiFiLED_WiFiLED, HIGH);
+	<||
+}
+
+function WiFiLEDTurnOff {
+	code: ||>
+		digitalWrite(kWiFiLED_WiFiLED, LOW);
+	<||
+}
+
+function ErrorDisplayShowNormalModeCode {
+	code: ||>
+		digitalWrite(kErrorDisplay_a, LOW );
+		digitalWrite(kErrorDisplay_b, LOW );
+		digitalWrite(kErrorDisplay_c, LOW );
+		digitalWrite(kErrorDisplay_d, LOW );
+	<||
+}
+
+function ErrorDisplayShowNoConnectionModeCode {
+	code: ||>
+		digitalWrite(kErrorDisplay_a, HIGH);
+		digitalWrite(kErrorDisplay_b, LOW );
+		digitalWrite(kErrorDisplay_c, LOW );
+		digitalWrite(kErrorDisplay_d, LOW );
+	<||
+}
+
+function DebugButtonMonitored {
+	code: ||>
+		int state = digitalRead(kDebug_DebugButton);
+		return state;
+	<||
+}

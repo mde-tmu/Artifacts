@@ -1,0 +1,22 @@
++------------------+----------------------------+-----------------------------------------+-----------------------+
+| Handlers         | Dependent Use Cases        | Handled Exceptions                      | Actors                |
++------------------+----------------------------+-----------------------------------------+-----------------------+
+| DisplayErrorCode | RecordData                 | NETWORK_EXCEPTION::WiFiUnreachable      | DEVICE::WiFiLED       |
+|                  |                            |                                         | DEVICE::ErrorDisplay* |
++------------------+----------------------------+-----------------------------------------+-----------------------+
+| ReconnectDevice  | ViewSmartLightDeviceStatus | NETWORK_EXCEPTION::WiFiUnreachable      | HUMAN::User           |
+|                  |                            |                                         | DEVICE::LED           |
+|                  |                            |                                         | DEVICE::WiFiLED       |
+|                  |                            |                                         | DEVICE::ErrorDisplay  |
++------------------+----------------------------+-----------------------------------------+-----------------------+
+| RepairDevice     | TurnOnSmartLightDevice     | HARDWARE_EXCEPTION::LEDFailure          | HUMAN::User           |
+|                  |                            | HARDWARE_EXCEPTION::WiFiLEDFailure      | DEVICE::LED           |
+|                  |                            | HARDWARE_EXCEPTION::ErrorDisplayFailure | DEVICE::WiFiLED       |
+|                  |                            |                                         | DEVICE::ErrorDisplay  |
+|                  +----------------------------+-----------------------------------------+-----------------------+
+|                  | DebugHardware              | HARDWARE_EXCEPTION::LEDFailure          | HUMAN::User           |
+|                  |                            | HARDWARE_EXCEPTION::WiFiLEDFailure      | DEVICE::DebugButton   |
+|                  |                            | HARDWARE_EXCEPTION::ErrorDisplayFailure | DEVICE::LED           |
+|                  |                            |                                         | DEVICE::WiFiLED       |
+|                  |                            |                                         | DEVICE::ErrorDisplay  |
++------------------+----------------------------+-----------------------------------------+-----------------------+

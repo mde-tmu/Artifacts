@@ -1,0 +1,666 @@
+/* Generated */
+
+interface:
+	@Mode
+	in event EnterNormalMode
+	@Mode
+	in event EnterNoConnectionMode
+
+	@Exception
+	in event LEDFailureRaisedInTurnOnSmartLightDevice
+	@Exception
+	in event LEDFailureRaisedInTurnOnSmartLightDeviceHandled
+	@Exception
+	in event WiFiLEDFailureRaisedInTurnOnSmartLightDevice
+	@Exception
+	in event WiFiLEDFailureRaisedInTurnOnSmartLightDeviceHandled
+	@Exception
+	in event ErrorDisplayFailureRaisedInTurnOnSmartLightDevice
+	@Exception
+	in event ErrorDisplayFailureRaisedInTurnOnSmartLightDeviceHandled
+	@Exception
+	in event LEDFailureRaisedInDebugHardware
+	@Exception
+	in event LEDFailureRaisedInDebugHardwareHandled
+	@Exception
+	in event WiFiLEDFailureRaisedInDebugHardware
+	@Exception
+	in event WiFiLEDFailureRaisedInDebugHardwareHandled
+	@Exception
+	in event ErrorDisplayFailureRaisedInDebugHardware
+	@Exception
+	in event ErrorDisplayFailureRaisedInDebugHardwareHandled
+	@Exception
+	in event WiFiUnreachableRaisedInViewSmartLightDeviceStatus
+	@Exception
+	in event WiFiUnreachableRaisedInViewSmartLightDeviceStatusHandled
+	@Exception
+	in event WiFiUnreachableRaisedInRecordData
+	@Exception
+	in event WiFiUnreachableRaisedInRecordDataHandled
+
+	in event UseSmartLightsFinished
+	in event Steps13MayBeRepeatedForEveryEachDeviceInTheSystemFinished
+	in event TheUserTurnsOnAnLEDWiFiLEDAndErrorDisplayFinished
+	in event TheUserObservesTheStatusOfAnLEDWiFiLEDAndErrorDisplayFinished
+	in event TheUserDebugsTheLEDWiFiLEDAndErrorDisplayFinished
+	in event TheUserViewsTheLogsFinished
+	in event Step4MayBeRepeatedForEachDeviceInTheSystemFinished
+	in event TheUserTurnsOffAnLEDWiFiLEDAndErrorDisplayFinished
+
+	in event OperateSmartLightsFinished
+	in event TheLDRManagesTheLEDFinished
+
+	in event TurnOnSmartLightDeviceFinished
+	in event TheUserSuppliesPowerToTheLEDWiFiLEDAndErrorDisplayFinished
+	in event TheSystemInitializesConnectionToTheLEDWiFiLEDAndErrorDisplayFinished
+	in event Steps24Repeat3TimesFinished
+	in event TheSystemInstructsTheLEDToBlinkFinished
+	in event TheSystemInstructsTheWiFiLEDToBlinkFinished
+	in event TheSystemInstructsTheErrorDisplayToBlinkFinished
+	in event TheLEDDoesNotBlinkFinished
+	in event TheWiFiLEDDoesNotBlinkFinished
+	in event TheErrorDisplayDoesNotBlinkFinished
+	/* Missing */
+	in event DecideTheSystemInstructsTheLEDToBlinkFinished
+	in event DecideTheSystemInstructsTheWiFiLEDToBlinkFinished
+	in event DecideTheSystemInstructsTheErrorDisplayToBlinkFinished
+	in event DecideWithNoDetection
+
+	in event TurnOffSmartLightDeviceFinished
+	in event TheUserStopsSupplyingPowerToTheLEDWiFiLEDAndErrorDisplayFinished
+
+	/* New */
+	in event DebugHardwareFinished
+	in event TheDebugButtonMonitorsTheUserForInputFinished
+	in event TheDebugButtonSendsInputDataToTheSystemFinished
+	in event SystemAscertainsThatTheDebugButtonHasBeenPushedFinished
+	in event Steps35Repeat3TimesFinished
+	in event TheSystemInstructsTheLEDToBlinkFinished
+	in event TheSystemInstructsTheWiFiLEDToBlinkFinished
+	in event TheSystemInstructsTheErrorDisplayToBlinkFinished
+	in event SystemAscertainsThatTheDebugButtonHasNotBeenPushedFinished
+	in event TheLEDDoesNotBlinkFinished
+	in event TheWiFiLEDDoesNotBlinkFinished
+	in event TheErrorDisplayDoesNotBlinkFinished
+	/* Missing */
+	in event DecideSystemAscertainsThatTheDebugButtonHasBeenPushed
+	in event DecideSystemAscertainsThatTheDebugButtonHasNotBeenPushed
+	in event DecideTheSystemInstructsTheLEDToBlinkFinished
+	in event DecideTheSystemInstructsTheWiFiLEDToBlinkFinished
+	in event DecideTheSystemInstructsTheErrorDisplayToBlinkFinished
+	in event DecideWithNoDetection
+
+	in event ViewSmartLightDeviceStatusFinished
+	in event TheSystemCommunicatesTheExternalLightIntensityStatusOfTheDeviceToTheUserThroughTheLEDFinished
+	in event TheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLEDFinished
+	in event TheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperationalFinished
+	in event TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiFinished
+	in event WiFiUnreachableFinished
+	/* Missing */
+	in event DecideTheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperational
+	in event DecideTheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi
+
+	in event ViewLogsFinished
+	in event TheUserRequestsTheLogsFromTheSystemFinished
+	in event TheSystemReturnsTheCopyOfTheLogsToTheUserFinished
+	in event TheSystemCannotFindAnyLogsFinished
+	in event TheSystemNotifiesTheUserThatThereAreZeroLogsInTheSystemFinished
+	/* Missing */
+	in event DecideTheSystemReturnsTheCopyOfTheLogsToTheUser
+	in event DecideTheSystemCannotFindAnyLogs
+
+	in event ManageLEDFinished
+	in event LDRMonitorsThePhysicalSurroundingFinished
+	in event LDRSendsExternalLightIntensityToSystemFinished
+	in event SystemCalculatesThatLightIntensityThresholdHasBeenReachedFinished
+	in event SystemTurnsOffLEDFinished
+	in event LEDActsOnPhysicalSurroundingByNotProvidingLightFinished
+	in event SystemRecordsExternalLightIntensityToTheSystemFinished
+	in event SystemCalculatesThatLightIntensityThresholdHasNotBeenReachedFinished
+	in event SystemTurnsOnLEDFinished
+	in event LEDActsOnPhysicalSurroundingByProvidingLightFinished
+	/* Missing */
+	in event DecideSystemCalculatesThatLightIntensityThresholdHasBeenReached
+	in event DecideSystemCalculatesThatLightIntensityThresholdHasNotBeenReached
+
+	in event RecordDataFinished
+	in event SystemCreatesALogOfTheLightIntensityFinished
+	in event SystemTurnsOnWiFiLEDFinished
+	in event SystemConnectsToWiFiFinished
+	in event SystemRecordsLogOfTheLightIntensityFinished
+	in event SystemTurnsOffWiFiLEDFinished
+	in event WiFiFailsToSendConfirmationFinished
+	in event WiFiUnreachableFinished
+	/* Missing */
+	in event DecideSystemRecordsLogOfTheLightIntensity
+	
+	in event DisplayErrorCodeFinished
+	in event SystemDeterminesThatItWasNotAbleToConnectToWiFiFinished
+	in event SystemSendsWiFiUnreachableCodeToErrorDisplayFinished
+	in event Step3RepeatsEvery1MinuteFinished
+	in event SystemAttemptsToReconnectToWiFiFinished
+	in event SystemSuccessfullyReconnectsToWiFiFinished
+	in event SystemSendsMessageToErrorDisplayToStopShowingErrorCodeFinished
+
+	in event ReconnectDeviceFinished
+	in event TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiFinished
+	in event TheUserResolvesConnectivityIssuesInTheEnvironmentFinished
+	in event Step2RepeatsEvery1MinuteFinished
+	in event SystemAttemptsToReconnectToWiFiFinished
+	in event TheSystemSuccessfullyConnectsToWiFiFinished
+
+	in event RepairDeviceFinished
+	in event TheSystemNotifiesTheUserByBlinkingTheLEDWiFiLEDAndTheErrorDisplayFinished
+	in event TheUserDeterminesTheBrokenHardwareComponentFinished
+	in event TheUserReplacesTheHardwareComponentFinished
+
+	in event LDRMonitored
+	in event LEDTurnOn
+	in event LEDTurnOff
+	in event WiFiLEDTurnOn
+	in event WiFiLEDTurnOff
+	in event ErrorDisplayShowNormalModeCode
+	in event ErrorDisplayShowNoConnectionModeCode
+	/* New */
+	in event DebugButtonMonitored
+entry -> OperatingSmartLightsSystem
+
+orthogonal state: OperatingSmartLightsSystem {
+	region: rUseSmartLightsView
+		entry -> UseSmartLightsBehaviour
+		composite state: UseSmartLightsBehaviour {
+			@Exception
+			out -> Pause by event LEDFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event WiFiLEDFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event ErrorDisplayFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event LEDFailureRaisedInDebugHardware
+			@Exception
+			out -> Pause by event WiFiLEDFailureRaisedInDebugHardware
+			@Exception
+			out -> Pause by event ErrorDisplayFailureRaisedInDebugHardware
+			@Exception
+			out -> Pause by event WiFiUnreachableRaisedInViewSmartLightDeviceStatus
+			@Exception
+			out -> Pause by event WiFiUnreachableRaisedInRecordData
+			region: r
+				entry -> TurnOnSmartLightDevice
+				composite state: TurnOnSmartLightDevice {
+					out -> ViewSmartLightDeviceStatus by event TurnOnSmartLightDeviceFinished
+					
+					region: r
+						entry -> TheSystemInitializesConnectionToTheLEDWiFiLEDAndErrorDisplay
+						state: TheSystemInitializesConnectionToTheLEDWiFiLEDAndErrorDisplay {
+							out -> TheSystemInstructsTheLEDToBlink by event TheSystemInitializesConnectionToTheLEDWiFiLEDAndErrorDisplayFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemInitializesConnectionToTheLEDWiFiLEDAndErrorDisplay {
+							out -> TheSystemInstructsTheLEDToBlink by event DecideTheSystemInstructsTheLEDToBlinkFinished
+							out -> TheSystemInstructsTheLEDToBlink by event DecideWithNoDetection raising LEDFailureRaisedInTurnOnSmartLightDevice
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateLED(kLED_LEDTurnOn);
+    delay(200);
+
+    updateLED(kLED_LEDTurnOff);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheLEDToBlink {
+							out -> TheSystemInstructsTheWiFiLEDToBlink by event TheSystemInstructsTheLEDToBlinkFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemInstructsTheLEDToBlink {
+							out -> TheSystemInstructsTheWiFiLEDToBlink by event DecideTheSystemInstructsTheWiFiLEDToBlinkFinished
+							out -> TheSystemInstructsTheWiFiLEDToBlink by event DecideWithNoDetection raising WiFiLEDFailureRaisedInTurnOnSmartLightDevice
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateWiFiLED(kWiFiLED_WiFiLEDTurnOn);
+    delay(200);
+
+    updateWiFiLED(kWiFiLED_WiFiLEDTurnOff);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheWiFiLEDToBlink {
+							out -> TheSystemInstructsTheErrorDisplayToBlink by event TheSystemInstructsTheWiFiLEDToBlinkFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemInstructsTheWiFiLEDToBlink {
+							out -> TheSystemInstructsTheErrorDisplayToBlink by event DecideTheSystemInstructsTheErrorDisplayToBlinkFinished
+							out -> TheSystemInstructsTheErrorDisplayToBlink by event DecideWithNoDetection raising ErrorDisplayFailureRaisedInTurnOnSmartLightDevice
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateErrorDisplay(kErrorDisplay_ErrorDisplayShowNormalModeCode);
+    delay(200);
+
+    updateErrorDisplay(kErrorDisplay_ErrorDisplayShowNoConnectionModeCode);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheErrorDisplayToBlink {
+							out -> Finished by event TheSystemInstructsTheErrorDisplayToBlinkFinished
+						}
+						state: Finished {
+							out -> final raising TurnOnSmartLightDeviceFinished
+						}
+				}
+				composite state: ViewSmartLightDeviceStatus {
+					out -> DebugHardware by event ViewSmartLightDeviceStatusFinished
+					
+					region: r
+						entry -> TheSystemCommunicatesTheExternalLightIntensityStatusOfTheDeviceToTheUserThroughTheLED
+						state: TheSystemCommunicatesTheExternalLightIntensityStatusOfTheDeviceToTheUserThroughTheLED {
+							out -> TheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLED by event TheSystemCommunicatesTheExternalLightIntensityStatusOfTheDeviceToTheUserThroughTheLEDFinished
+						}
+						state: TheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLED {
+							out -> DecideAfterTheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLED by event TheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLEDFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemCommunicatesTheInternalNetworkStatusOfTheDeviceToTheUserThroughTheWiFiLED {
+							out -> TheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperational by event DecideTheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperational
+							out -> TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi by event DecideTheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi
+						}
+						state: TheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperational {
+							out -> Finished by event TheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperationalFinished
+						}
+						state: TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi {
+							out -> TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiRaisingWiFiUnreachable by event TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiFinished raising WiFiUnreachableRaisedInViewSmartLightDeviceStatus
+						}
+						state: TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiRaisingWiFiUnreachable {
+							out -> TheSystemNotifiesTheUserThroughTheErrorDisplayThatEverythingIsOperational by event WiFiUnreachableRaisedInViewSmartLightDeviceStatusHandled
+						}
+						state: Finished {
+							out -> final raising ViewSmartLightDeviceStatusFinished
+						}
+				}
+				composite state: DebugHardware {
+					out -> ViewLogs by event DebugHardwareFinished
+					
+					region: r
+						entry -> TheDebugButtonSendsInputDataToTheSystem
+						state: TheDebugButtonSendsInputDataToTheSystem {
+							out -> Finished raising TheDebugButtonSendsInputDataToTheSystemFinished
+						}
+						@Code[int buttonState = DebugButtonMonitored();
+  if (buttonState == HIGH) {
+  	return;
+  }]
+						/* Missing */
+						state: DecideAfterTheDebugButtonSendsInputDataToTheSystem {
+							out -> SystemAscertainsThatTheDebugButtonHasBeenPushed by event DecideSystemAscertainsThatTheDebugButtonHasBeenPushed
+							out -> SystemAscertainsThatTheDebugButtonHasNotBeenPushed by event DecideSystemAscertainsThatTheDebugButtonHasNotBeenPushed
+						}
+						state: SystemAscertainsThatTheDebugButtonHasBeenPushed {
+							out -> DecideAfterSystemAscertainsThatTheDebugButtonHasBeenPushed by event SystemAscertainsThatTheDebugButtonHasBeenPushedFinished
+						}
+						/* Missing */
+						state: DecideAfterSystemAscertainsThatTheDebugButtonHasBeenPushed {
+							out -> TheSystemInstructsTheLEDToBlink by event DecideTheSystemInstructsTheLEDToBlinkFinished
+							out -> TheSystemInstructsTheLEDToBlink by event DecideWithNoDetection raising LEDFailureRaisedInDebugHardware
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateLED(kLED_LEDTurnOn);
+    delay(200);
+
+    updateLED(kLED_LEDTurnOff);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheLEDToBlink {
+							out -> DecideAfterTheSystemInstructsTheLEDToBlink by event TheSystemInstructsTheLEDToBlinkFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemInstructsTheLEDToBlink {
+							out -> TheSystemInstructsTheWiFiLEDToBlink by event DecideTheSystemInstructsTheWiFiLEDToBlinkFinished
+							out -> TheSystemInstructsTheWiFiLEDToBlink by event DecideWithNoDetection raising WiFiLEDFailureRaisedInDebugHardware
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateWiFiLED(kWiFiLED_WiFiLEDTurnOn);
+    delay(200);
+
+    updateWiFiLED(kWiFiLED_WiFiLEDTurnOff);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheWiFiLEDToBlink {
+							out -> DecideAfterTheSystemInstructsTheWiFiLEDToBlink by event TheSystemInstructsTheWiFiLEDToBlinkFinished
+						}
+						/* Missing */
+						state: DecideAfterTheSystemInstructsTheWiFiLEDToBlink {
+							out -> TheSystemInstructsTheErrorDisplayToBlink by event DecideTheSystemInstructsTheErrorDisplayToBlinkFinished
+							out -> TheSystemInstructsTheErrorDisplayToBlink by event DecideWithNoDetection raising ErrorDisplayFailureRaisedInDebugHardware
+						}
+						@Code[for (int i = 0; i < 3; i++) {
+    updateErrorDisplay(kErrorDisplay_ErrorDisplayShowNormalModeCode);
+    delay(200);
+
+    updateErrorDisplay(kErrorDisplay_ErrorDisplayShowNoConnectionModeCode);
+    delay(200);
+  }]
+						state: TheSystemInstructsTheErrorDisplayToBlink {
+							out -> Finished by event TheSystemInstructsTheErrorDisplayToBlinkFinished
+						}
+						state: SystemAscertainsThatTheDebugButtonHasNotBeenPushed {
+							out -> Finished by event SystemAscertainsThatTheDebugButtonHasNotBeenPushedFinished
+						}
+						state: Finished {
+							out -> final raising DebugHardwareFinished
+						}
+				}
+				composite state: ViewLogs {
+					out -> TurnOffSmartLightDevice by event ViewLogsFinished
+					
+					region: r
+						entry -> TheUserRequestsTheLogsFromTheSystem
+						state: TheUserRequestsTheLogsFromTheSystem {
+							out -> DecideAfterTheUserRequestsTheLogsFromTheSystem by event TheUserRequestsTheLogsFromTheSystemFinished
+						}
+						/* Missing */
+						state: DecideAfterTheUserRequestsTheLogsFromTheSystem {
+							out -> TheSystemReturnsTheCopyOfTheLogsToTheUser by event DecideTheSystemReturnsTheCopyOfTheLogsToTheUser
+							out -> TheSystemCannotFindAnyLogs by event DecideTheSystemCannotFindAnyLogs
+						}
+						state: TheSystemReturnsTheCopyOfTheLogsToTheUser {
+							out -> Finished by event TheSystemReturnsTheCopyOfTheLogsToTheUserFinished
+						}
+						state: TheSystemCannotFindAnyLogs {
+							out -> TheSystemNotifiesTheUserThatThereAreZeroLogsInTheSystem by event TheSystemCannotFindAnyLogsFinished
+						}
+						state: TheSystemNotifiesTheUserThatThereAreZeroLogsInTheSystem {
+							out -> Finished by event TheSystemNotifiesTheUserThatThereAreZeroLogsInTheSystemFinished
+						}
+						state: Finished {
+							out -> final raising ViewLogsFinished
+						}
+				}
+				composite state: TurnOffSmartLightDevice {
+					out -> final by event TurnOffSmartLightDeviceFinished
+					
+					region: r
+						entry -> Finished
+						state: Finished {
+							out -> final raising TurnOffSmartLightDeviceFinished
+						}
+				}
+				state: Finished {
+					out -> final raising UseSmartLightsFinished
+				}
+		}
+		@Exception
+		state: Pause {
+			out -> UseSmartLightsBehaviour by event LEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> UseSmartLightsBehaviour by event WiFiLEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> UseSmartLightsBehaviour by event ErrorDisplayFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> UseSmartLightsBehaviour by event LEDFailureRaisedInDebugHardwareHandled
+			out -> UseSmartLightsBehaviour by event WiFiLEDFailureRaisedInDebugHardwareHandled
+			out -> UseSmartLightsBehaviour by event ErrorDisplayFailureRaisedInDebugHardwareHandled
+			out -> UseSmartLightsBehaviour by event WiFiUnreachableRaisedInViewSmartLightDeviceStatusHandled
+			out -> UseSmartLightsBehaviour by event WiFiUnreachableRaisedInRecordDataHandled
+		}
+
+	region: rOperateSmartLightsView
+		entry -> OperateSmartLightsBehaviour
+		composite state: OperateSmartLightsBehaviour {
+			@Exception
+			out -> Pause by event LEDFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event WiFiLEDFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event ErrorDisplayFailureRaisedInTurnOnSmartLightDevice
+			@Exception
+			out -> Pause by event LEDFailureRaisedInDebugHardware
+			@Exception
+			out -> Pause by event WiFiLEDFailureRaisedInDebugHardware
+			/* New */
+			@Exception
+			out -> Pause by event ErrorDisplayFailureRaisedInDebugHardware
+			@Exception
+			out -> Pause by event WiFiUnreachableRaisedInViewSmartLightDeviceStatus
+			@Exception
+			out -> Pause by event WiFiUnreachableRaisedInRecordData
+			region: r
+				entry -> ManageLED
+				composite state: ManageLED {
+					out -> DeviceDecidesToRepeat by event ManageLEDFinished
+					
+					region: r
+						entry -> LDRMonitorsThePhysicalSurrounding
+						@Code[int light_intensity = LDRMonitored();]
+						state: LDRMonitorsThePhysicalSurrounding {
+							out -> LDRSendsExternalLightIntensityToSystem by event LDRMonitorsThePhysicalSurroundingFinished
+						}
+						state: LDRSendsExternalLightIntensityToSystem {
+							out -> DecideAfterLDRSendsExternalLightIntensityToSystem by event LDRSendsExternalLightIntensityToSystemFinished
+						}
+						/* Missing */
+						@Code[if (light_intensity >= 800) {
+    updateLED(kLED_LEDTurnOff);
+  } else {
+    updateLED(kLED_LEDTurnOn);
+  }]
+						state: DecideAfterLDRSendsExternalLightIntensityToSystem {
+							out -> SystemCalculatesThatLightIntensityThresholdHasBeenReached by event DecideSystemCalculatesThatLightIntensityThresholdHasBeenReached
+							out -> SystemCalculatesThatLightIntensityThresholdHasNotBeenReached by event DecideSystemCalculatesThatLightIntensityThresholdHasNotBeenReached
+						}
+						state: SystemCalculatesThatLightIntensityThresholdHasBeenReached {
+							out -> SystemTurnsOffLED by event SystemCalculatesThatLightIntensityThresholdHasBeenReachedFinished
+						}
+						state: SystemTurnsOffLED {
+							out -> LEDActsOnPhysicalSurroundingByNotProvidingLight by event SystemTurnsOffLEDFinished
+						}
+						state: LEDActsOnPhysicalSurroundingByNotProvidingLight {
+							out -> RecordData by event LEDActsOnPhysicalSurroundingByNotProvidingLightFinished
+						}
+						composite state: RecordData {
+							out -> Finished by event RecordDataFinished
+							
+							region: r
+								entry -> SystemCreatesALogOfTheLightIntensity
+								@Code[String json = generateJSON("light_intensity", light_intensity);
+  Serial.println(json);]
+								state: SystemCreatesALogOfTheLightIntensity {
+									out -> SystemTurnsOnWiFiLED by event SystemCreatesALogOfTheLightIntensityFinished
+								}
+								state: SystemTurnsOnWiFiLED {
+									out -> SystemConnectsToWiFi by event SystemTurnsOnWiFiLEDFinished
+								}
+								state: SystemConnectsToWiFi {
+									out -> DecideAfterSystemConnectsToWiFi by event SystemConnectsToWiFiFinished
+								}
+								/* Missing */
+								state: DecideAfterSystemConnectsToWiFi {
+									out -> SystemRecordsLogOfTheLightIntensity by event DecideSystemRecordsLogOfTheLightIntensity
+									out -> WiFiFailsToSendConfirmation after 30s raising WiFiUnreachableRaisedInRecordData
+								}
+								state: SystemRecordsLogOfTheLightIntensity {
+									out -> SystemTurnsOffWiFiLED by event SystemRecordsLogOfTheLightIntensityFinished
+								}
+								state: SystemTurnsOffWiFiLED {
+									out -> Finished by event SystemTurnsOffWiFiLEDFinished
+								}
+								state: WiFiFailsToSendConfirmation {
+									out -> Finished by event WiFiFailsToSendConfirmationFinished
+								}
+								state: Finished {
+									out -> final raising RecordDataFinished
+								}
+						}
+						state: SystemCalculatesThatLightIntensityThresholdHasNotBeenReached {
+							out -> SystemTurnsOnLED by event SystemCalculatesThatLightIntensityThresholdHasNotBeenReachedFinished
+						}
+						state: SystemTurnsOnLED {
+							out -> LEDActsOnPhysicalSurroundingByProvidingLight by event SystemTurnsOnLEDFinished
+						}
+						state: LEDActsOnPhysicalSurroundingByProvidingLight {
+							out -> RecordData by event LEDActsOnPhysicalSurroundingByProvidingLightFinished
+						}
+						state: Finished {
+							out -> final raising ManageLEDFinished
+						}
+				}
+				state: DeviceDecidesToRepeat {
+					out -> ManageLED after 100ms
+				}
+		}
+		@Exception
+		state: Pause {
+			out -> OperateSmartLightsBehaviour by event LEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> OperateSmartLightsBehaviour by event WiFiLEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> OperateSmartLightsBehaviour by event ErrorDisplayFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> OperateSmartLightsBehaviour by event LEDFailureRaisedInDebugHardwareHandled
+			out -> OperateSmartLightsBehaviour by event WiFiLEDFailureRaisedInDebugHardwareHandled
+			/* New */
+			out -> OperateSmartLightsBehaviour by event ErrorDisplayFailureRaisedInDebugHardwareHandled
+			out -> OperateSmartLightsBehaviour by event WiFiUnreachableRaisedInViewSmartLightDeviceStatusHandled
+			out -> OperateSmartLightsBehaviour by event WiFiUnreachableRaisedInRecordDataHandled
+		}
+
+	@Handler
+	region: rDisplayErrorCodeHandler
+		entry -> Idle
+		state: Idle {
+			out -> DisplayErrorCodeBehaviour by event WiFiUnreachableRaisedInRecordData
+		}
+		composite state: DisplayErrorCodeBehaviour {
+			out -> Idle by event WiFiUnreachableRaisedInRecordDataHandled
+			region: r
+				entry -> EnterHandler
+				@Mode
+				state: EnterHandler {
+					out -> SystemDeterminesThatItWasNotAbleToConnectToWiFi raising EnterNoConnectionMode
+				}
+				state: SystemDeterminesThatItWasNotAbleToConnectToWiFi {
+					out -> SystemSendsWiFiUnreachableCodeToErrorDisplay by event SystemDeterminesThatItWasNotAbleToConnectToWiFiFinished
+				}
+				state: SystemSendsWiFiUnreachableCodeToErrorDisplay {
+					out -> SystemAttemptsToReconnectToWiFi by event SystemSendsWiFiUnreachableCodeToErrorDisplayFinished
+				}
+				state: SystemAttemptsToReconnectToWiFi {
+					out -> SystemSuccessfullyReconnectsToWiFi by event SystemAttemptsToReconnectToWiFiFinished
+				}
+				state: SystemSuccessfullyReconnectsToWiFi {
+					out -> SystemSendsMessageToDisplayToStopShowingErrorCode by event SystemSuccessfullyReconnectsToWiFiFinished
+				}
+				state: SystemSendsMessageToDisplayToStopShowingErrorCode {
+					out -> ExitHandler by event SystemSendsMessageToErrorDisplayToStopShowingErrorCodeFinished
+				}
+				@Mode
+				state: ExitHandler {
+					out -> Finish raising EnterNormalMode
+				}
+				state: Finish {
+					out -> final raising WiFiUnreachableRaisedInRecordDataHandled
+				}
+		}
+
+	@Handler
+	region: rReconnectDeviceHandler
+		entry -> Idle
+		state: Idle {
+			out -> ReconnectDeviceBehaviour by event WiFiUnreachableRaisedInViewSmartLightDeviceStatus
+		}
+		composite state: ReconnectDeviceBehaviour {
+			out -> Idle by event WiFiUnreachableRaisedInViewSmartLightDeviceStatusHandled
+			region: r
+				entry -> EnterHandler
+				@Mode
+				state: EnterHandler {
+					out -> TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi
+				}
+				state: TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFi {
+					out -> SystemAttemptsToReconnectToWiFi by event TheSystemNotifiesTheUserThroughTheErrorDisplayThatItCannotConnectToWiFiFinished
+				}
+				state: SystemAttemptsToReconnectToWiFi {
+					out -> TheSystemSuccessfullyConnectsToWiFi by event SystemAttemptsToReconnectToWiFiFinished
+				}
+				state: TheSystemSuccessfullyConnectsToWiFi {
+					out -> ExitHandler by event TheSystemSuccessfullyConnectsToWiFiFinished
+				}
+				@Mode
+				state: ExitHandler {
+					out -> Finish raising EnterNormalMode
+				}
+				state: Finish {
+					out -> final raising WiFiUnreachableRaisedInRecordDataHandled
+				}
+		}
+
+	@Handler
+	region: rRepairDeviceHandler
+		entry -> Idle
+		state: Idle {
+			out -> RepairDeviceBehaviour by event LEDFailureRaisedInTurnOnSmartLightDevice
+			out -> RepairDeviceBehaviour by event WiFiLEDFailureRaisedInTurnOnSmartLightDevice
+			out -> RepairDeviceBehaviour by event ErrorDisplayFailureRaisedInTurnOnSmartLightDevice
+			out -> RepairDeviceBehaviour by event LEDFailureRaisedInDebugHardware
+			out -> RepairDeviceBehaviour by event WiFiLEDFailureRaisedInDebugHardware
+			out -> RepairDeviceBehaviour by event ErrorDisplayFailureRaisedInDebugHardware
+		}
+		composite state: RepairDeviceBehaviour {
+			out -> Idle by event LEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> Idle by event WiFiLEDFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> Idle by event ErrorDisplayFailureRaisedInTurnOnSmartLightDeviceHandled
+			out -> Idle by event LEDFailureRaisedInDebugHardwareHandled
+			out -> Idle by event WiFiLEDFailureRaisedInDebugHardwareHandled
+			out -> Idle by event ErrorDisplayFailureRaisedInDebugHardwareHandled
+			region: r
+				entry -> EnterHandler
+				@Mode
+				state: EnterHandler {
+					out -> TheSystemNotifiesTheUserByBlinkingTheLEDWiFiLEDAndTheErrorDisplay
+				}
+				state: TheSystemNotifiesTheUserByBlinkingTheLEDWiFiLEDAndTheErrorDisplay {
+					out -> ExitHandler by event TheSystemNotifiesTheUserByBlinkingTheLEDWiFiLEDAndTheErrorDisplayFinished
+				}
+				@Mode
+				state: ExitHandler {
+					out -> Finish
+				}
+				state: Finish {
+					out -> final raising LEDFailureRaisedInTurnOnSmartLightDeviceHandled, WiFiLEDFailureRaisedInTurnOnSmartLightDeviceHandled, ErrorDisplayFailureRaisedInTurnOnSmartLightDeviceHandled, LEDFailureRaisedInDebugHardwareHandled, WiFiLEDFailureRaisedInDebugHardwareHandled, ErrorDisplayFailureRaisedInDebugHardwareHandled
+				}
+		}
+
+	@Mode
+	region: mode_detection
+		entry -> Normal
+		state: Normal {
+			out -> NoConnection by event EnterNoConnectionMode
+		}
+		state: NoConnection {
+			out -> Normal by event EnterNormalMode
+		}
+	
+	region: rLDR
+		entry -> Update
+		state: Update {
+			out -> Update by event LDRMonitored
+		}
+	
+	region: rLED
+		entry -> Update
+		state: Update {
+			out -> Update by event LEDTurnOn
+			out -> Update by event LEDTurnOff
+		}
+	
+	region: rWiFiLED
+		entry -> Update
+		state: Update {
+			out -> Update by event WiFiLEDTurnOn
+			out -> Update by event WiFiLEDTurnOff
+		}
+	
+	region: rErrorDisplay
+		entry -> Update
+		state: Update {
+			out -> Update by event ErrorDisplayShowNormalModeCode
+			out -> Update by event ErrorDisplayShowNoConnectionModeCode
+		}
+	
+	/* New */
+	region: rDebugButton
+		entry -> Update
+		state: Update {
+			out -> Update by event DebugButtonMonitored
+		}
+}
