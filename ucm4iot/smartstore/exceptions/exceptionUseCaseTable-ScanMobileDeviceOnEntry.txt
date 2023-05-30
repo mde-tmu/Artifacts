@@ -1,0 +1,11 @@
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| UseCase::ScanMobileDeviceOnEntry                                                                                                                                                            |
++-----------------------+----------------+------------------+-------------------+-------------------------------------+--------------------+--------------------------------------------------+
+| Exception Type        | Exception Name | Exception Source | Associated Actors | Handler                             | Interrupt Type     | Path                                             |
++-----------------------+----------------+------------------+-------------------+-------------------------------------+--------------------+--------------------------------------------------+
+| ENVIRONMENT_EXCEPTION | CriminalAttack | Shopping         |                   | {AlertOnAttack} << Shopping         | Interrupt and Fail | GLOBAL::Shopping >> {AlertOnAttack} !I&F         |
+|                       |                | MaintainStore    |                   | {AlertOnAttack} << MaintainStore    |                    | GLOBAL::MaintainStore >> {AlertOnAttack} !I&F    |
+|                       +----------------+------------------+-------------------+-------------------------------------+--------------------+--------------------------------------------------+
+|                       | FireHazard     | Shopping         |                   | {HandleFireHazard} << Shopping      | Interrupt and Fail | GLOBAL::Shopping >> {HandleFireHazard} !I&F      |
+|                       |                | MaintainStore    |                   | {HandleFireHazard} << MaintainStore |                    | GLOBAL::MaintainStore >> {HandleFireHazard} !I&F |
++-----------------------+----------------+------------------+-------------------+-------------------------------------+--------------------+--------------------------------------------------+

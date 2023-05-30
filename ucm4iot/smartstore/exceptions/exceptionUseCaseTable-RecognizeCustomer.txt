@@ -1,0 +1,13 @@
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| UseCase::RecognizeCustomer                                                                                                                                                                        |
++-----------------------+----------------+-------------------+-------------------+--------------------------------------+----------------------------+----------------------------------------------+
+| Exception Type        | Exception Name | Exception Source  | Associated Actors | Handler                              | Interrupt Type             | Path                                         |
++-----------------------+----------------+-------------------+-------------------+--------------------------------------+----------------------------+----------------------------------------------+
+| ENVIRONMENT_EXCEPTION | CriminalAttack | Shopping          |                   | {AlertOnAttack} << Shopping          | Interrupt and Continue (1) | GLOBAL::Shopping >> {AlertOnAttack} !I&F     |
+|                       |                | ExitStore         |                   | {AlertOnAttack} << ExitStore         | Interrupt and Fail (1)     | GLOBAL::ExitStore >> {AlertOnAttack} !I&C    |
+|                       +----------------+-------------------+-------------------+--------------------------------------+----------------------------+----------------------------------------------+
+|                       | FireHazard     | Shopping          |                   | {HandleFireHazard} << Shopping       | Interrupt and Continue (1) | GLOBAL::Shopping >> {HandleFireHazard} !I&F  |
+|                       |                | ExitStore         |                   | {HandleFireHazard} << ExitStore      | Interrupt and Fail (1)     | GLOBAL::ExitStore >> {HandleFireHazard} !I&C |
++-----------------------+----------------+-------------------+-------------------+--------------------------------------+----------------------------+----------------------------------------------+
+| SOFTWARE_EXCEPTION    | ImageUnmatched | RecognizeCustomer | DEVICE::Camera    | {RequestCamera} << RecognizeCustomer | Interrupt and Continue     | RecognizeCustomer >> {RequestCamera} !I&C    |
++-----------------------+----------------+-------------------+-------------------+--------------------------------------+----------------------------+----------------------------------------------+
