@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usecasediagram:UseCaseDiagram xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usecasediagram="http://www.ucm4iot.org/mde/iot/usecasediagram" xmlns:xmi="http://www.omg.org/XMI">
+	<actors xsi:type="usecasediagram:HumanActor" name="User" lowerBound="1" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.2 //@scopes.0/@usecases.3 //@scopes.0/@usecases.4 //@scopes.0/@usecases.5 //@scopes.0/@usecases.6 //@scopes.0/@usecases.10 //@scopes.0/@usecases.11" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="LED" lowerBound="0" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.2 //@scopes.0/@usecases.3 //@scopes.0/@usecases.4 //@scopes.0/@usecases.5 //@scopes.0/@usecases.7 //@scopes.0/@usecases.11" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="WiFiLED" lowerBound="0" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.2 //@scopes.0/@usecases.3 //@scopes.0/@usecases.4 //@scopes.0/@usecases.5 //@scopes.0/@usecases.8 //@scopes.0/@usecases.11" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="ErrorDisplay" lowerBound="0" usecase="//@scopes.0/@usecases.0 //@scopes.0/@usecases.2 //@scopes.0/@usecases.3 //@scopes.0/@usecases.4 //@scopes.0/@usecases.5 //@scopes.0/@usecases.9 //@scopes.0/@usecases.10 //@scopes.0/@usecases.11" upperBound="-1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="LDR" lowerBound="1" usecase="//@scopes.0/@usecases.1 //@scopes.0/@usecases.7" upperBound="1"/>
+	<actors xsi:type="usecasediagram:DeviceActor" name="DebugButton" lowerBound="1" usecase="//@scopes.0/@usecases.4" upperBound="1"/>
+	<actors xsi:type="usecasediagram:PhysicalEntityActor" name="PhysicalSurrounding" lowerBound="-1" usecase="//@scopes.0/@usecases.7" upperBound="-1"/>
+	<scopes name="SmartLightsSystem">
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="UseSmartLights">
+			<includes includedCase="//@scopes.0/@usecases.2"/>
+			<includes includedCase="//@scopes.0/@usecases.5"/>
+			<includes includedCase="//@scopes.0/@usecases.4"/>
+			<includes includedCase="//@scopes.0/@usecases.6"/>
+			<includes includedCase="//@scopes.0/@usecases.3"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="OperateSmartLights">
+			<includes includedCase="//@scopes.0/@usecases.7"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="TurnOnSmartLightDevice"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="TurnOffSmartLightDevice"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="DebugHardware"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ViewSmartLightDeviceStatus"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ViewLogs"/>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="ManageLED">
+			<includes includedCase="//@scopes.0/@usecases.8"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:StandardUseCase" name="RecordData"/>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="DisplayErrorCode">
+			<interrupts xsi:type="usecasediagram:InterruptAndFail" interruptedCase="//@scopes.0/@usecases.8" exceptions="//@scopes.0/@exceptions.3"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="ReconnectDevice">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.5" exceptions="//@scopes.0/@exceptions.3"/>
+		</usecases>
+		<usecases xsi:type="usecasediagram:HandlerUseCase" name="RepairDevice">
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.2" exceptions="//@scopes.0/@exceptions.0 //@scopes.0/@exceptions.1 //@scopes.0/@exceptions.2"/>
+			<interrupts xsi:type="usecasediagram:InterruptAndContinue" interruptedCase="//@scopes.0/@usecases.4" exceptions="//@scopes.0/@exceptions.0 //@scopes.0/@exceptions.1 //@scopes.0/@exceptions.2"/>
+		</usecases>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="LEDFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="WiFiLEDFailure"/>
+		<exceptions xsi:type="usecasediagram:HardwareException" name="ErrorDisplayFailure"/>
+		<exceptions xsi:type="usecasediagram:NetworkException" name="WiFiUnreachable"/>
+	</scopes>
+</usecasediagram:UseCaseDiagram>

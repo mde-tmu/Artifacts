@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iotdomainmodel:IoTDomainModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotdomainmodel="http://www.ucm4iot.org/mde/iot/iotdomainmodel" name="">
+  <users xsi:type="iotdomainmodel:HumanUser" invokes="//@users.1 //@users.2 //@users.3 //@users.4 //@users.5" interactsWith="//@devices.2 //@devices.3 //@devices.4 //@devices.1" name="User"/>
+  <users xsi:type="iotdomainmodel:Service" name="TurnOnSmartLightDevice"/>
+  <users xsi:type="iotdomainmodel:Service" name="ViewSmartLightDeviceStatus"/>
+  <users xsi:type="iotdomainmodel:Service" name="DebugHardware"/>
+  <users xsi:type="iotdomainmodel:Service" name="ViewLogs" exposes="//@resources.0"/>
+  <users xsi:type="iotdomainmodel:Service" name="TurnOffSmartLightDevice"/>
+  <physicalEntities name="LED"/>
+  <physicalEntities name="WiFiLED"/>
+  <physicalEntities name="ErrorDisplay"/>
+  <physicalEntities name="LDR"/>
+  <physicalEntities name="DebugButton"/>
+  <physicalEntities name="PhysicalSurrounding"/>
+  <physicalEntities name="SmartLightDevice"/>
+  <resources xsi:type="iotdomainmodel:NetworkResource" hasInformationOn="//@physicalEntities.5" name="Logs"/>
+  <virtualEntities name="SmartLightDeviceADA" represents="//@physicalEntities.6"/>
+  <virtualEntities name="PhysicalSurroundingPDA" represents="//@physicalEntities.5"/>
+  <devices xsi:type="iotdomainmodel:Sensor" name="LDR" attachedTo="//@physicalEntities.6" monitors="//@physicalEntities.5">
+    <codeAnnotations functionName="Monitored" functionCode="int light_intensity = analogRead(kLightSensing_LDR); return light_intensity;"/>
+    <pinannotation number="32"/>
+  </devices>
+  <devices xsi:type="iotdomainmodel:Sensor" name="DebugButton" attachedTo="//@physicalEntities.6">
+    <codeAnnotations functionName="Monitored" functionCode="int state = digitalRead(kDebug_DebugButton); return state;"/>
+    <pinannotation number="21"/>
+  </devices>
+  <devices xsi:type="iotdomainmodel:Actuator" name="LED" attachedTo="//@physicalEntities.6" actsOn="//@physicalEntities.5">
+    <codeAnnotations functionName="TurnOn" functionCode="digitalWrite(kSmartLight_LED, HIGH);"/>
+    <codeAnnotations functionName="TurnOff" functionCode="digitalWrite(kSmartLight_LED, LOW);"/>
+    <pinannotation type="OUTPUT" number="5"/>
+  </devices>
+  <devices xsi:type="iotdomainmodel:Actuator" name="WiFiLED" attachedTo="//@physicalEntities.6">
+    <codeAnnotations functionName="TurnOn" functionCode="digitalWrite(kWiFiLED_WiFiLED, HIGH);"/>
+    <codeAnnotations functionName="TurnOff" functionCode="digitalWrite(kWiFiLED_WiFiLED, LOW);"/>
+    <pinannotation type="OUTPUT" number="2"/>
+  </devices>
+  <devices xsi:type="iotdomainmodel:Actuator" name="ErrorDisplay" attachedTo="//@physicalEntities.6">
+    <codeAnnotations functionName="ShowNormalModeCode" functionCode="digitalWrite(kErrorDisplay_a, LOW ); digitalWrite(kErrorDisplay_b, LOW ); digitalWrite(kErrorDisplay_c, LOW ); digitalWrite(kErrorDisplay_d, LOW );"/>
+    <codeAnnotations functionName="ShowNoConnectionModeCode" functionCode="digitalWrite(kErrorDisplay_a, HIGH); digitalWrite(kErrorDisplay_b, LOW ); digitalWrite(kErrorDisplay_c, LOW ); digitalWrite(kErrorDisplay_d, LOW );"/>
+    <pinannotation type="OUTPUT" number="27"/>
+    <pinannotation type="OUTPUT" number="14"/>
+    <pinannotation type="OUTPUT" number="12"/>
+    <pinannotation type="OUTPUT" number="13"/>
+  </devices>
+</iotdomainmodel:IoTDomainModel>
